@@ -1,0 +1,165 @@
+	.links {
+		position: absolute;
+		left: 10%;
+	}
+
+	nav .navbar-nav li a:hover {
+		text-decoration: underline;
+	}
+
+	.navbar.navbar-default {
+		border: 0;
+		border-radius: none;
+		background-color: black;
+
+	}
+
+	.navbar-inverse .navbar-brand {
+		color: white;
+	}
+
+	nav .navbar-nav li a {
+		color: white !important;
+	}
+
+	.form-control {
+		border: 0;
+	}
+
+	#navBarSearchForm input[type=text] {
+		width: 330px !important;
+		border: 0;
+		border-radius: 0;
+
+	}
+
+	.navbar {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	.glyphicon-desktop {
+		font-size: 10px;
+		border: none;
+		border-radius: 0;
+	}
+
+	.form-mobile-search {
+		display: none;
+	}
+
+	.button-search {
+		border: none;
+		border-radius: 0;
+		right: 119%;
+	}
+
+	.folder-button {
+		background: black;
+		color: white;
+		position: absolute;
+		right: 0%;
+		top: 15%;
+	}
+
+	#mySidenaadasd {
+		display: none;
+	}
+
+	@media only screen and (max-width: 769px) {
+		body {
+			background-color: ;
+		}
+
+		#mySidenaadasd {
+			display: block;
+		}
+
+		.navbar-brand {
+			position: absolute;
+			left: 12%;
+			top: 2%;
+
+		}
+
+		.navbar-toggle {
+			position: absolute;
+			right: 85%;
+		}
+
+		.form-mobile-search {
+			display: inline-block;
+		}
+
+
+		.navbar-default {
+			height: 100px;
+			z-index: 1;
+		}
+
+		#navBarSearchFormMobile input[type=text] {
+			position: absolute;
+			width: 98% !important;
+			left: 1%;
+			border: 0;
+			border-radius: 0;
+		}
+
+		.navbar-toggle {
+			border: none;
+		}
+
+		.navbar-toggle .icon-bar {
+			display: block;
+			width: 24px;
+			height: 4px;
+			/* border-radius: 1px; */
+		}
+
+		.mobile-search-input {
+			position: absolute;
+			bottom: 0%;
+		}
+
+		.button-search-mobile {
+			float: right;
+			right: 2%;
+		}
+
+		.sidenavmono {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 0;
+			top: 15%;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+			top: 12%;
+		}
+
+		.sidenavmono a {
+			padding: 8px 8px 8px 28px;
+			text-decoration: none;
+			font-size: 12px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+			color: white;
+		}
+	}
+
+	.sidenavmono a:hover {
+		color: #f1f1f1;
+	}
+
+	.sidenavmono .closebtn {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		font-size: 19px;
+		margin-left: 50px;
+	}
