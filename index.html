@@ -1,140 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 </head>
 
 <body>
-	<nav class="navbar  navbar-default navbar-fixed-top">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button onclick="openNav()" type="button" data-toggle="collapse" class="navbar-toggle">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a href="#" class="navbar-brand">Brand</a>
-			<form class="form-mobile-search" id="navBarSearchFormMobile">
-				<div class="form-group mobile-search-input">
-					<div class="input-group">
-						<span class="input-group-btn">
-							<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
+	<div id="app">
+		<div>
+			<nav class="navbar  navbar-default navbar-fixed-top">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button onclick="openNav()" type="button" data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Brand</a>
+					<form class="form-mobile-search" id="navBarSearchFormMobile">
+						<div class="form-group mobile-search-input">
+							<div class="input-group">
+								<span class="input-group-btn">
+									<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
 
-							<button class="btn button-search-mobile btn-green" type="button"><i class="glyphicon glyphicon-search glyphicon-search-mobile"></i></button>
-						</span>
+									<button class="btn button-search-mobile btn-green" type="button"><i class="glyphicon glyphicon-search glyphicon-search-mobile"></i></button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<!-- Collection of nav links, forms, and other content for toggling -->
+				<div id="navbarCollapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav sidenav links">
+						<li class=""><a href="#">Home</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Departments</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search" id="navBarSearchForm">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
+								<span class="input-group-btn">
+									<button class="btn button-search btn-green" type="button"><i class="glyphicon glyphicon-desktop glyphicon-search"></i></button>
+								</span>
+							</div>
+						</div>
+					</form>
+
+					<ul class="nav navbar-nav justify-items-en ">
+						<button class="btn folder-button btn-green" type="button"><i class="glyphicon glyphicon-lock"></i></button>
+					</ul>
+				</div>
+			</nav>
+			<div id="mySidenaadasd" class="sidenavmono">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Clients</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="title">
+				<div class="text">
+					<h3>PURCHASING ASSISTANT</h3>
+					<h4>AMSTERDAM, THE NETHERLANDS</h4>
+				</div>
+			</div>
+
+	
+	 <div class="extened-container">
+          		<form id="ref_form"
+  @submit="checkForm"
+  action="https://vuejs.org/"
+  method="post">
+
+              <div class="container" id="form">
+           
+					<div class="row">
+						<div class="col-sm-6">
+							<input v-model="name" class="form-control  has-success  has-feedback" style="" id="name" name="name" placeholder="Name" type="text">
+							<i class="fa fa-check form-icon" style="display:none;" id="name-icon"></i>
+						</div>
+						<div class="col-sm-6 ">
+							<input class="form-control form-up" id="surname" v-model="surname" name="surname" placeholder="Surname" type="text" >
+						<i class="fa fa-check form-icon" style="display:none;" id="surname-icon"></i>
+						</div>
+					</div>
+					<div class="row  move-inputs">
+						<div class="col-sm-6">
+							<input class="form-control" v-model="tel" name="tel" id="tel" placeholder="Phone Number" type="text" >
+							<i class="fa fa-check form-icon" style="display:none;" id="tel-icon"></i>
+						</div>
+						<div class="col-sm-6 ">
+							<input class="form-control form-up" id="email" v-model="email" name="email" placeholder="Email" type="text">
+						   	<i class="fa fa-check form-icon" style="display:none;" id="email-icon"></i>
+						</div>
+					</div>
+					<div class="row  move-inputs">
+						<div class="col-sm-6">
+							<input class="form-control" id="date" v-model="date" name="date" placeholder="date" type="date" >
+							<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
+						</div>
+						<div class="col-sm-6">
+							<input class="form-control form-up " id="country" v-model="country" name="country" placeholder="Country" type="text" >
+						  <i class="fa fa-check form-icon" style="display:none;" id="country-icon"></i>
+						</div>
+					</div>
+					<div class="row move-inputs">
+						<div class="col-sm-6">
+					<input class="form-control " id="city" v-model="city" name="city" placeholder="City" type="text" >
+						  <i class="fa fa-check form-icon" style="display:none;" id="city-icon"></i>
+						</div>
+						<div class="col-sm-6">
+						<input class="form-control form-up " id="post" v-model="post" name="post" placeholder="Post Code" type="text" >
+						  <i class="fa fa-check form-icon" style="display:none;" id="post-icon"></i>
+						</div>
+					</div>
+
+
+					<div class="col-sm-6 comments ">
+						<label for="comment">Comment:</label>
+						<textarea rows="4" cols="50" class="form-control"></textarea>
+					</div>
+					<div class="col-sm-6 comments">
+
+						<div class="col-sm-12 form-butt">
+						<div class="row ">
+								<div class="col-sm-4 labelss">
+									<label>Resume</label>
+									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
+								</div>
+								<div class="col-sm-8">
+									<div class="col-sm-6 col-xs-6 comments">
+									<label class="btn btn-default btn-file" id="cv">
+											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+										</label>
+									</div>
+									<div class="col-sm-6 col-xs-6 comments">
+									
+												<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-sm-12 form-butt">
+						<div class="row ">
+								<div class="col-sm-4 labelss">
+									<label>Portfolio</label>
+									<span id="files_checked" class="glyphicon glyphicon-ok" ></span>
+								</div>
+								<div class="col-sm-8">
+									<div class="col-sm-6 col-xs-6 comments">
+									<label class="btn btn-default btn-file" id="cv">
+											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+										</label>
+									</div>
+									<div class="col-sm-6 col-xs-6 comments">
+									
+												<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-sm-12 form-butt">
+					     		<div class="row ">
+								<div class="col-sm-4 labelss">
+									<label>Portfolio</label>
+									<span id="files_checked" class="glyphicon glyphicon-ok" ></span>
+								</div>
+								<div class="col-sm-8">
+									<div class="col-sm-6 col-xs-6 comments">
+									<label class="btn btn-default btn-file" id="cv">
+											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+										</label>
+									</div>
+									<div class="col-sm-6 col-xs-6 comments">
+									
+												<button type="button" class="btn btn-primary" @click="loadPicker()"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+										<div class="col-sm-6 col-xs-6 comments" style="padding-top: 15px;">
+						<button onclick="goBack()"> &#8592; Back to job description </button>
+					</div>
+					<div class="col-sm-6 col-xs-6 comments" style="padding-top: 15px;">
+						<div class="col-sm-6 col-xs-6 col-md-4 comments">
+							<input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+						</div>
+						<div class="col-sm-6 col-xs-6 col-md-8 comments">
+							<input @click="" type="submit" class="" style="width:100%">
+						</div>
 					</div>
 				</div>
-			</form>
-		</div>
-
-		<!-- Collection of nav links, forms, and other content for toggling -->
-		<div id="navbarCollapse" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav sidenav links">
-				<li class=""><a href="#">Home</a></li>
-				<li><a href="#">Jobs</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Departments</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-			<form class="navbar-form navbar-right" role="search" id="navBarSearchForm">
-				<div class="form-group">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
-						<span class="input-group-btn">
-							<button class="btn button-search btn-green" type="button"><i class="glyphicon glyphicon-desktop glyphicon-search"></i></button>
-						</span>
-					</div>
-				</div>
-			</form>
-
-			<ul class="nav navbar-nav justify-items-en ">
-				<button class="btn folder-button btn-green" type="button"><i class="glyphicon glyphicon-lock"></i></button>
-			</ul>
-		</div>
-	</nav>
-	<div id="mySidenaadasd" class="sidenavmono">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
-		<a href="#">Services</a>
-		<a href="#">Clients</a>
-		<a href="#">Contact</a>
-	</div>
-	<div class="title">
-		<div class="text">
-			<h1>PURCHASING ASSISTANT</h1>
-			<h3>AMSTERDAM, THE NETHERLANDS</h3>
-		</div>
+		
+		</form>
 	</div>
 	
-<div class="container-fluid">
-<div class="row justify-content-around">
-        <div class="col-sm-4 form-group">
-            <label>Label1</label>
-            <input class="form-control" type="text"/>
-        </div>
-        <div class="col-sm-4 form-group">
-            <label>Label2</label>
-            <input class="form-control" type="text"/>
-        </div>
-	</div>
-       <div class="row justify-content-around">
-         <div class="col-sm-4 form-group">
-            <label>Label1</label>
-            <input class="form-control" type="text"/>
-        </div>
-        <div class="col-sm-4 form-group">
-            <label>Label2</label>
-            <input class="form-control" type="text"/>
-        </div>
-	</div>
-       <div class="row justify-content-around">
-        <div class="col-sm-4 form-group">
-            <label>Label1</label>
-            <input class="form-control" type="text"/>
-        </div>
-        <div class="col-sm-4 form-group">
-            <label>Label2</label>
-            <input class="form-control" type="text"/>
-        </div>
-	</div>
-        <div class="row justify-content-around">
-         <div class="col-sm-4 form-group">
-            <label>Label1</label>
-            <input class="form-control" type="text"/>
-        </div>
-        <div class="col-sm-4 form-group">
-            <label>Label2</label>
-            <input class="form-control" type="text"/>
-        </div>
-	</div>
-    
-    
-    </div>
-    
-	</div>
+	
 
+
+			<div class="title container-fluid">
+				<div class="dad">
+
+					<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
+
+						<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
+						<ul>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						</ul>
+					</div>
+					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
+						<h2 class="procedure-title">GOT A QUESTION?</h2>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+
+
+					</div>
+					
+				</div>
+					<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+			</div>
+			<!-- Footer -->
+			<footer class="page-footer font-small blue pt-4">
+				<!-- Footer Links -->
+				<div class="container-fluid text-center text-md-left">
+					<!-- Grid row -->
+					<div class="row footer-cont">
+						<!-- Grid column -->
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+							<!-- Links -->
+							<h5 class="text-uppercase">Jobs At</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!">Home</a>
+								</li>
+								<li>
+									<a href="#!">Jobs</a>
+								</li>
+								<li>
+									<a href="#!">About</a>
+								</li>
+								<li>
+									<a href="#!">Department</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+							<!-- Links -->
+							<h5 class="text-uppercase">Information</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!">FAQ</a>
+								</li>
+								<li>
+									<a href="#!">Application Process</a>
+								</li>
+								<li>
+									<a href="#!">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#!">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+							<div class="social">
+								<!-- Links -->
+								<h5 class="text-uppercase">Links</h5>
+								<ul class="list-unstyled">
+									<li>
+										<i class="fa fa-envelope"></i>
+										<label>Newsletter</label>
+									</li>
+									<li>
+										<i class="fa fa-instagram"></i>
+										<label>Instagram</label>
+									</li>
+									<li>
+										<i class="fa fa-twitter"></i>
+										<label>Twitter</label>
+									</li>
+									<li>
+										<i class="fa fa-tumblr"></i>
+										<label>Tumblr</label>
+									</li>
+									<li>
+										<i class="fa fa-linkedin"></i>
+										<label>Linkedin</label>
+									</li>
+									<li>
+										<i class="fa fa-facebook"></i>
+										<label>facebook</label>
+									</li>
+									<li>
+										<i class="fa fa-pinterest"></i>
+										<label>Printerest</label>
+									</li>
+									<li>
+										<i class="fa fa-youtube"></i>
+										<label>Youtube</label>
+									</li>
+									<li>
+										<i class="fa fa-google"></i>
+										<label>Google +</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Grid column -->
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+							<!-- Links -->
+							<h5 class="text-uppercase">FOLLOW US</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!">Link 1</a>
+								</li>
+								<li>
+									<a href="#!">Link 2</a>
+								</li>
+								<li>
+									<a href="#!">Link 3</a>
+								</li>
+								<li>
+									<a href="#!">Link 4</a>
+								</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+				<!-- Footer Links -->
+
+				<!-- Copyright -->
+				<div class="footer-copyright text-center py-3">© 2018 Copyright:
+					<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+				</div>
+				<!-- Copyright -->
+
+			</footer>
+
+			<!-- Footer -->
+		</div>
+
+	</div>
+	<script>
+    </script>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
 
 </body>
 
 <script>
-	function openNav() {
-		document.getElementById("mySidenaadasd").style.width = "100px";
-		document.getElementById("main_content").style.marginLeft = "130px";
+	//	function openNav() {
+	//		document.getElementById("mySidenaadasd").style.width = "100px";
+	//		document.getElementById("main_content").style.marginLeft = "130px";
+	//
+	//	}
+	//
+	//	function closeNav() {
+	//		document.getElementById("mySidenaadasd").style.width = "0";
+	//		document.getElementById("main_content").style.marginLeft = "0px";
+	//	}
 
-	}
-
-	function closeNav() {
-		document.getElementById("mySidenaadasd").style.width = "0";
-		document.getElementById("main_content").style.marginLeft = "0px";
-	}
 </script>
 
 </html>

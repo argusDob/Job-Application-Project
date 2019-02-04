@@ -1,7 +1,11 @@
+*{
+	font-family: font-family: 'PT Sans', sans-serif;
+}
+
 /*nav bar configutration*/
 .links {
 	position: absolute;
-	left: 10%;
+	left: 200px;
 }
 
 nav .navbar-nav li a:hover {
@@ -81,10 +85,11 @@ nav .navbar-nav li a {
 .title {
 	background-image: url(rawpixel-250087-unsplash.jpg);
 	background-repeat: round;
-	height: 70vh;
+	height: 50vh;
 	filter: grayscale(80%);
 	-webkit-filter: grayscale(100%);
 	margin-top: 50px;
+	background-attachment: fixed;
 
 }
 
@@ -99,7 +104,7 @@ nav .navbar-nav li a {
 	transform: translate(-50%, -50%);
 	text-align: center;
 	border: solid;
-	width: 84%;
+	width: 60%;
 	background-color: black;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.6);
@@ -107,4 +112,248 @@ nav .navbar-nav li a {
 	/* For IE 8*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
+
+#form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.comments {
+	padding-left: 0;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.form-butt {
+	padding-top:15px;
+	padding-right: 0;
+}
+
+.extened-container {
+   padding-top:100px;
+	background: whitesmoke;
+}
+
+.labelss{
+	text-align: center;
+}
+
+.move-inputs {
+	padding-top: 15px;
+}
+
+.job-desc {
+
+	
+}
+
+.contact,.procedure{
+	background: white;
+}
+
+
+  .footer-cont {
+  margin: 0 auto;
+    width: 60%;
+	  padding: 30px;
+    text-align: left;
+}
+
+i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+
+}
+
+
+
+.dad{ 
+    display: flex;
+    background: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+
+.dad ul{
+	font-size:11px;
+}
+
+.procedure-title {
+	margin-left:30px;
+}
+
+.app_title {
+	font-size: 20px;
+}
+
+.form-icon {
+    color: green;
+    border-radius: 14px;
+    position: absolute;
+    top: 3px;
+    right: 23px;
+}
+
+#files_checked {
+	display: none;
+}
+
+.back-top{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+@media only screen and (max-width: 769px) {
+		body {
+			background-color: ;
+		}
+
+		#mySidenaadasd {
+			display: block;
+		}
+
+		.navbar-brand {
+			position: absolute;
+			      margin-left: 50px;
+
+			top: 2%;
+
+		}
+
+		.navbar-toggle {
+			position: absolute;
+			margin-left: 15px;
+
+		}
+
+		.form-mobile-search {
+			display: inline-block;
+		}
+
+
+		.navbar-default {
+			height: 100px;
+			z-index: 1;
+		}
+
+		#navBarSearchFormMobile input[type=text] {
+			position: absolute;
+			width: 98% !important;
+			left: 1%;
+			border: 0;
+			border-radius: 0;
+		}
+
+
+		.navbar-toggle {
+			border: none;
+		}
+
+		.navbar-toggle .icon-bar {
+			display: block;
+			width: 24px;
+			height: 4px;
+			/* border-radius: 1px; */
+		}
+
+		.mobile-search-input {
+			position: absolute;
+			bottom: 0%;
+		}
+
+		.button-search-mobile {
+			float: right;
+			right: 2%;
+		}
+
+		.sidenavmono {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 0;
+			top: 15%;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+			top: 12%;
+		}
+
+		.sidenavmono a {
+			padding: 8px 8px 8px 28px;
+			text-decoration: none;
+			font-size: 12px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+			color: white;
+		}
+	
+
+	.sidenavmono a:hover {
+		color: #f1f1f1;
+	}
+
+	.sidenavmono .closebtn {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		font-size: 19px;
+		margin-left: 50px;
+	}
+	
+	.dad{
+		flex-direction: column;
+		width: 100%;
+		padding: 0;
+	}
+	
+	#form {
+    width: 100%;
+   
+}
+	
+	.form-up {
+	margin-top: 10px;
+}
+	
+	.text{
+		width: 90%
+	}
+		
+    }
+
+
 
