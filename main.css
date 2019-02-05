@@ -97,13 +97,12 @@ nav .navbar-nav li a {
 	color: white !important;
 	font-size: 20px;
 	position: absolute;
-	top: 50%;
+	top: 31%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
-	border: solid;
 	width: 60%;
 	background-color: black;
 	background-color: rgb(0, 0, 0);
@@ -111,6 +110,7 @@ nav .navbar-nav li a {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 	/* For IE 8*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	z-index: 1;
 }
 
 #form {
@@ -234,6 +234,40 @@ i.fa {
 	right: 0;
 }
 
+.dad1{
+	display: none;
+}
+
+   .button {
+    width: 100%;
+  	background-color: #1500ff; /* Green */
+  	border: none;
+  	color: white;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+}
+
+#files_checked1{
+	float: right;
+}
+
+.button_gd{
+	padding: 10px;
+}
+
+.but{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.gdrive{
+	padding-right: 1px;
+    padding-left: 1px;
+}
+
+
 @media only screen and (max-width: 769px) {
 		body {
 			background-color: ;
@@ -334,6 +368,25 @@ i.fa {
 		margin-left: 50px;
 	}
 	
+	.title{
+		display: none;
+	}
+	
+	.text{
+	z-index: 1;
+    width: 100%;
+    top: 17%;
+    position: fixed;
+    background-color: darkgrey;
+    /* font-size: 10px; */
+	}
+	
+	
+	.extened-container {
+        padding-top: 200px;
+    background: whitesmoke;
+}
+	
 	.dad{
 		flex-direction: column;
 		width: 100%;
@@ -349,9 +402,6 @@ i.fa {
 	margin-top: 10px;
 }
 	
-	.text{
-		width: 90%
-	}
 		
     }
 

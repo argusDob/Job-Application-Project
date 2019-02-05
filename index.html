@@ -74,11 +74,12 @@
 				<a href="#">Clients</a>
 				<a href="#">Contact</a>
 			</div>
-			<div class="title">
 				<div class="text">
 					<h3>PURCHASING ASSISTANT</h3>
 					<h4>AMSTERDAM, THE NETHERLANDS</h4>
 				</div>
+			<div class="title">
+			
 			</div>
 
 	
@@ -91,31 +92,31 @@
               <div class="container" id="form">
            
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-lg-6 col-sm-6">
 							<input v-model="name" class="form-control  has-success  has-feedback" style="" id="name" name="name" placeholder="Name" type="text">
 							<i class="fa fa-check form-icon" style="display:none;" id="name-icon"></i>
 						</div>
-						<div class="col-sm-6 ">
+						<div class="col-lg-6 col-sm-6">
 							<input class="form-control form-up" id="surname" v-model="surname" name="surname" placeholder="Surname" type="text" >
 						<i class="fa fa-check form-icon" style="display:none;" id="surname-icon"></i>
 						</div>
 					</div>
 					<div class="row  move-inputs">
-						<div class="col-sm-6">
+						<div class="col-lg-6 col-sm-6">
 							<input class="form-control" v-model="tel" name="tel" id="tel" placeholder="Phone Number" type="text" >
 							<i class="fa fa-check form-icon" style="display:none;" id="tel-icon"></i>
 						</div>
-						<div class="col-sm-6 ">
+						<div class="col-lg-6 col-sm-6 ">
 							<input class="form-control form-up" id="email" v-model="email" name="email" placeholder="Email" type="text">
 						   	<i class="fa fa-check form-icon" style="display:none;" id="email-icon"></i>
 						</div>
 					</div>
 					<div class="row  move-inputs">
-						<div class="col-sm-6">
+						<div class="col-lg-6 col-sm-6">
 							<input class="form-control" id="date" v-model="date" name="date" placeholder="date" type="date" >
 							<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-lg-6 col-sm-6">
 							<input class="form-control form-up " id="country" v-model="country" name="country" placeholder="Country" type="text" >
 						  <i class="fa fa-check form-icon" style="display:none;" id="country-icon"></i>
 						</div>
@@ -132,73 +133,78 @@
 					</div>
 
 
-					<div class="col-sm-6 comments ">
+					<div class="col-lg-6 comments ">
 						<label for="comment">Comment:</label>
 						<textarea rows="4" cols="50" class="form-control"></textarea>
 					</div>
-					<div class="col-sm-6 comments">
-
-						<div class="col-sm-12 form-butt">
-						<div class="row ">
-								<div class="col-sm-4 labelss">
+							<div class="col-sm-12 col-lg-6 but">
+<!-- souksou  -->
+						<div class="col-sm-12 col-lg-12 form-butt">
+							<div class="row ">
+								<div class="col-sm-4">
 									<label>Resume</label>
 									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
 								</div>
-								<div class="col-sm-8">
-									<div class="col-sm-6 col-xs-6 comments">
-									<label class="btn btn-default btn-file" id="cv">
+								<div class="col-sm-8 gdrive">
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
+									<div class="btn-file button button_gd"> 
 											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
-										</label>
 									</div>
-									<div class="col-sm-6 col-xs-6 comments">
+									</div>
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
 									
-												<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					<div class="col-sm-12 form-butt">
+							<div class="row ">
+								<div class="col-sm-4">
+									<label>Resume</label>
+									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
+								</div>
+								<div class="col-sm-8 gdrive">
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
+									<div class="btn-file button button_gd"> 
+											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+									</div>
+									</div>
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
+									
+												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
 									</div>
 								</div>
 							</div>
 
 						</div>
 						<div class="col-sm-12 form-butt">
-						<div class="row ">
-								<div class="col-sm-4 labelss">
-									<label>Portfolio</label>
-									<span id="files_checked" class="glyphicon glyphicon-ok" ></span>
+							<div class="row ">
+								<div class="col-sm-4">
+									<label>Resume</label>
+									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
 								</div>
-								<div class="col-sm-8">
-									<div class="col-sm-6 col-xs-6 comments">
-									<label class="btn btn-default btn-file" id="cv">
+								<div class="col-sm-8 gdrive">
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
+									<div class="btn-file button button_gd"> 
 											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
-										</label>
 									</div>
-									<div class="col-sm-6 col-xs-6 comments">
+									</div>
+									<div class="col-sm-6 col-xs-6 col-md-6 comments">
 									
-												<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
 									</div>
 								</div>
 							</div>
 
 						</div>
-						<div class="col-sm-12 form-butt">
-					     		<div class="row ">
-								<div class="col-sm-4 labelss">
-									<label>Portfolio</label>
-									<span id="files_checked" class="glyphicon glyphicon-ok" ></span>
-								</div>
-								<div class="col-sm-8">
-									<div class="col-sm-6 col-xs-6 comments">
-									<label class="btn btn-default btn-file" id="cv">
-											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
-										</label>
-									</div>
-									<div class="col-sm-6 col-xs-6 comments">
-									
-												<button type="button" class="btn btn-primary" @click="loadPicker()"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
-									</div>
-								</div>
-							</div>
-						</div>
+
+						<!-- souksou  -->
+
+
 					</div>
-										<div class="col-sm-6 col-xs-6 comments" style="padding-top: 15px;">
+										<div class="col-sm-12 col-xs-6 comments" style="padding-top: 15px;">
 						<button onclick="goBack()"> &#8592; Back to job description </button>
 					</div>
 					<div class="col-sm-6 col-xs-6 comments" style="padding-top: 15px;">
@@ -220,7 +226,7 @@
 			<div class="title container-fluid">
 				<div class="dad">
 
-					<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
+					<div class="procedure col-md-6 col-xsm-12 col-sm-6 ">
 
 						<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
 						<ul>
@@ -243,6 +249,29 @@
 				</div>
 					<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
 			</div>
+				    <div class="dad1">
+
+					<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
+
+						<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
+						<ul>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						</ul>
+					</div>
+					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
+						<h2 class="procedure-title">GOT A QUESTION?</h2>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+
+
+					</div>
+					
+				</div>
 			<!-- Footer -->
 			<footer class="page-footer font-small blue pt-4">
 				<!-- Footer Links -->
@@ -376,16 +405,16 @@
 </body>
 
 <script>
-	//	function openNav() {
-	//		document.getElementById("mySidenaadasd").style.width = "100px";
-	//		document.getElementById("main_content").style.marginLeft = "130px";
-	//
-	//	}
-	//
-	//	function closeNav() {
-	//		document.getElementById("mySidenaadasd").style.width = "0";
-	//		document.getElementById("main_content").style.marginLeft = "0px";
-	//	}
+		function openNav() {
+			document.getElementById("mySidenaadasd").style.width = "100%";
+			document.getElementById("main_content").style.marginLeft = "130px";
+	
+		}
+	
+		function closeNav() {
+			document.getElementById("mySidenaadasd").style.width = "0";
+			document.getElementById("main_content").style.marginLeft = "0px";
+		}
 
 </script>
 
