@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
@@ -77,153 +77,150 @@
 				<a href="#">Clients</a>
 				<a href="#">Contact</a>
 			</div>
-				<div class="text">
-					<h3>PURCHASING ASSISTANT</h3>
-					<h4>AMSTERDAM, THE NETHERLANDS</h4>
-				</div>
+			<div class="text">
+				<h3>PURCHASING ASSISTANT</h3>
+				<h4>AMSTERDAM, THE NETHERLANDS</h4>
+			</div>
 			<div class="title">
-			
+
 			</div>
 
-	
-	 <div class="extened-container">
-          		<form id="ref_form"
-  @submit="checkForm"
-  action="https://vuejs.org/"
-  method="post">
 
-              <div class="container" id="form">
-           
-					<div class="row">
-						<div class="col-lg-6 col-sm-6">
-							<input v-model="name" class="form-control  has-success  has-feedback" style="" id="name" name="name" placeholder="Name" type="text">
-							<i class="fa fa-check form-icon" style="display:none;" id="name-icon"></i>
+			<div class="extened-container">
+				<form id="ref_form" @submit="checkForm" action="https://vuejs.org/" method="post">
+
+					<div class="container" id="form">
+
+						<div class="row">
+							<div class="col-lg-6 col-sm-6">
+								<input v-model="name" class="form-control  has-success  has-feedback" style="" id="name" name="name" placeholder="Name" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="name-icon"></i>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<input class="form-control form-up" id="surname" v-model="surname" name="surname" placeholder="Surname" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="surname-icon"></i>
+							</div>
 						</div>
-						<div class="col-lg-6 col-sm-6">
-							<input class="form-control form-up" id="surname" v-model="surname" name="surname" placeholder="Surname" type="text" >
-						<i class="fa fa-check form-icon" style="display:none;" id="surname-icon"></i>
+						<div class="row  move-inputs">
+							<div class="col-lg-6 col-sm-6">
+								<input class="form-control" v-model="tel" name="tel" id="tel" placeholder="Phone Number" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="tel-icon"></i>
+							</div>
+							<div class="col-lg-6 col-sm-6 ">
+								<input class="form-control form-up" id="email" v-model="email" name="email" placeholder="Email" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="email-icon"></i>
+							</div>
 						</div>
-					</div>
-					<div class="row  move-inputs">
-						<div class="col-lg-6 col-sm-6">
-							<input class="form-control" v-model="tel" name="tel" id="tel" placeholder="Phone Number" type="text" >
-							<i class="fa fa-check form-icon" style="display:none;" id="tel-icon"></i>
+						<div class="row  move-inputs">
+							<div class="col-sm-6">
+								<input class="form-control form-up " id="post" v-model="post" name="post" placeholder="Post Code" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="post-icon"></i>
+							</div>
+							<div class="col-lg-6 col-sm-6 col-xsm-6">
+								<input class="form-control form-up " id="country" v-model="country" name="country" placeholder="Country" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="country-icon"></i>
+							</div>
 						</div>
-						<div class="col-lg-6 col-sm-6 ">
-							<input class="form-control form-up" id="email" v-model="email" name="email" placeholder="Email" type="text">
-						   	<i class="fa fa-check form-icon" style="display:none;" id="email-icon"></i>
+						<div class="row move-inputs">
+							<div class="col-sm-6">
+								<input class="form-control " id="city" v-model="city" name="city" placeholder="City" type="text">
+								<i class="fa fa-check form-icon" style="display:none;" id="city-icon"></i>
+							</div>
+							<div class="col-lg-6 col-sm-6 col-xsm-6">
+								<input class="form-control" id="date" v-model="date" name="date" placeholder="date" type="date">
+								<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
+							</div>
 						</div>
-					</div>
-					<div class="row  move-inputs">
-						<div class="col-lg-6 col-sm-6 col-xsm-6">
-							<input class="form-control" id="date" v-model="date" name="date" placeholder="date" type="date" >
-							<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
-						</div>
-						<div class="col-lg-6 col-sm-6 col-xsm-6">
-							<input class="form-control form-up " id="country" v-model="country" name="country" placeholder="Country" type="text" >
-						  <i class="fa fa-check form-icon" style="display:none;" id="country-icon"></i>
-						</div>
-					</div>
-					<div class="row move-inputs">
-						<div class="col-sm-6">
-					<input class="form-control " id="city" v-model="city" name="city" placeholder="City" type="text" >
-						  <i class="fa fa-check form-icon" style="display:none;" id="city-icon"></i>
-						</div>
-						<div class="col-sm-6">
-						<input class="form-control form-up " id="post" v-model="post" name="post" placeholder="Post Code" type="text" >
-						  <i class="fa fa-check form-icon" style="display:none;" id="post-icon"></i>
-						</div>
-					</div>
 
 
-					<div class="col-lg-6 comments ">
-						<label for="comment">Comment:</label>
-						<textarea rows="4" cols="50" class="form-control"></textarea>
-					</div>
-							<div class="col-sm-12 col-lg-6 but">
-<!-- souksou  -->
-						<div class="col-sm-12 col-lg-12 form-butt">
-							<div class="row ">
-								<div class="col-sm-4">
-									<label>Resume</label>
-									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
-								</div>
-								<div class="col-sm-8 gdrive">
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									<div class="btn-file button button_gd"> 
-											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+						<div class="col-lg-6 comments ">
+							<label for="comment">Comment:</label>
+							<textarea rows="4" cols="50" class="form-control"></textarea>
+						</div>
+						<div class="col-sm-12 col-lg-6 but">
+							<!-- souksou  -->
+							<div class="col-sm-12 col-lg-12 form-butt">
+								<div class="row ">
+									<div class="col-sm-4 col-lg-4">
+										<label>Resume</label>
+										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
 									</div>
-									</div>
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									
-												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
+									<div class="col-sm-8 col-lg-8 gdrive">
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+											<div class="btn-file button button_up" type=button><img src="icons8-monitor-filled-500.png"/>
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+											</div>
+										</div>
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+
+											<button type="button" class="btn btn-default btn-file button"><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
+										</div>
 									</div>
 								</div>
+
+							</div>
+							<div class="col-sm-12 form-butt">
+								<div class="row ">
+									<div class="col-sm-4">
+										<label>Resume</label>
+										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
+									</div>
+									<div class="col-sm-8 gdrive">
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png" />
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+											</div>
+										</div>
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+
+											<button type="button" class="btn btn-default btn-file button" @click=""><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="col-sm-12 form-butt">
+								<div class="row ">
+									<div class="col-sm-4">
+										<label>Resume</label>
+										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
+									</div>
+									<div class="col-sm-8 gdrive">
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png"/>
+										UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+											</div>
+										</div>
+										<div class="col-sm-6 col-xs-6 col-md-6 comments">
+
+											<button type="button" class="btn btn-default btn-file button" @click="loadPicker()"><img src="Google-Drive-icon.png" width="30" height="30" />GOOG</button>
+										</div>
+									</div>
+								</div>
+
 							</div>
 
+							<!-- souksou  -->
+
+
 						</div>
-					<div class="col-sm-12 form-butt">
-							<div class="row ">
-								<div class="col-sm-4">
-									<label>Resume</label>
-									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
-								</div>
-								<div class="col-sm-8 gdrive">
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									<div class="btn-file button button_gd"> 
-											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
-									</div>
-									</div>
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									
-												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
-									</div>
-								</div>
+						<div class="col-lg-6 col-sm-12 col-xs-4 comments" style="padding-top: 15px;">
+							<button onclick="goBack()"> &#8592; Back to job description </button>
+						</div>
+						<div class="col-lg-6 col-sm-12 col-xs-8 comments" style="padding-top: 15px;">
+							<div class="col-sm-6 col-xs-4 col-md-4 comments">
+								<input type="checkbox" name="vehicle1" value="Bike"> I have a bike
 							</div>
-
-						</div>
-						<div class="col-sm-12 form-butt">
-							<div class="row ">
-								<div class="col-sm-4">
-									<label>Resume</label>
-									<span id="files_checked1" class="glyphicon glyphicon-ok" ></span>
-								</div>
-								<div class="col-sm-8 gdrive">
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									<div class="btn-file button button_gd"> 
-											Upload <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
-									</div>
-									</div>
-									<div class="col-sm-6 col-xs-6 col-md-6 comments">
-									
-												<button type="button" class="btn btn-default btn-file button"><img src="google-drive.png" width="30" height="30"/>G-Drive</button>
-									</div>
-								</div>
+							<div class="col-sm-6 col-xs-8 col-md-8 comments">
+								<button type="button" class="btn btn-default btn-file button" @click="checkForm()"><img src="" width="30" height="30" />Apply for the job</button>
 							</div>
-
-						</div>
-
-						<!-- souksou  -->
-
-
-					</div>
-										<div class="col-sm-12 col-xs-6 comments" style="padding-top: 15px;">
-						<button onclick="goBack()"> &#8592; Back to job description </button>
-					</div>
-					<div class="col-sm-6 col-xs-6 comments" style="padding-top: 15px;">
-						<div class="col-sm-6 col-xs-6 col-md-4 comments">
-							<input type="checkbox" name="vehicle1" value="Bike"> I have a bike
-						</div>
-						<div class="col-sm-6 col-xs-6 col-md-8 comments">
-							<input @click="" type="submit" class="" style="width:100%">
 						</div>
 					</div>
-				</div>
-		
-		</form>
-	</div>
-	
-	
+
+				</form>
+			</div>
+
+
 
 
 			<div class="title container-fluid">
@@ -248,33 +245,33 @@
 
 
 					</div>
-					
+
 				</div>
-					<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-envelope"></span>Upload</button>
+				<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
 			</div>
-				    <div class="dad1">
+			<div class="dad1">
 
-					<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
+				<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
 
-						<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
-						<ul>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-						</ul>
-					</div>
-					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
-						<h2 class="procedure-title">GOT A QUESTION?</h2>
-						<ul>Pleace contact reqruitment</ul>
-						<ul>Pleace contact reqruitment</ul>
-						<ul>Pleace contact reqruitment</ul>
-
-
-					</div>
-					
+					<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
+					<ul>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+					</ul>
 				</div>
+				<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
+					<h2 class="procedure-title">GOT A QUESTION?</h2>
+					<ul>Pleace contact reqruitment</ul>
+					<ul>Pleace contact reqruitment</ul>
+					<ul>Pleace contact reqruitment</ul>
+
+
+				</div>
+
+			</div>
 			<!-- Footer -->
 			<footer class="page-footer font-small blue pt-4">
 				<!-- Footer Links -->
@@ -401,24 +398,29 @@
 
 	</div>
 	<script>
-    </script>
+	</script>
+
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+	<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script>
+
+
 	<script src="main.js"></script>
 
-</body>
-
 <script>
-		function openNav() {
-			document.getElementById("mySidenaadasd").style.width = "100%";
-			document.getElementById("main_content").style.marginLeft = "130px";
-	
-		}
-	
-		function closeNav() {
-			document.getElementById("mySidenaadasd").style.width = "0";
-			document.getElementById("main_content").style.marginLeft = "0px";
-		}
+	function openNav() {
+		document.getElementById("mySidenaadasd").style.width = "100%";
+		document.getElementById("main_content").style.marginLeft = "130px";
+
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenaadasd").style.width = "0";
+		document.getElementById("main_content").style.marginLeft = "0px";
+	}
 
 </script>
+</body>
+
 
 </html>

@@ -1,5 +1,3 @@
-
-
 const app = new Vue({
 	el: '#app',
 	data: {
@@ -12,14 +10,12 @@ const app = new Vue({
 		country: null,
 		city: null,
 		post: null,
-		developerKey :'AIzaSyAzp6SxayT8DjXAMPx-k2KttJxYmKbDmUw',
-		clientId : "310009666215-4bc907ejc1fv0l5eav6pdpmmm46cj8kc.apps.googleusercontent.com",
-		 appId : "310009666215",
-		scope : ['https://www.googleapis.com/auth/drive'],
-		pickerApiLoaded : false,
-
-
-
+		developerKey: 'AIzaSyAzp6SxayT8DjXAMPx-k2KttJxYmKbDmUw',
+		clientId: "310009666215-4bc907ejc1fv0l5eav6pdpmmm46cj8kc.apps.googleusercontent.com",
+		appId: "310009666215",
+		scope: ['https://www.googleapis.com/auth/drive'],
+		pickerApiLoaded: false,
+		token: "",
 	},
 	methods: {
 		checkForm: function (e) {
@@ -123,11 +119,6 @@ const app = new Vue({
 				document.getElementById("post").style.border = "1px solid #ccc";
 
 			}
-
-
-
-
-
 			e.preventDefault();
 		},
 
@@ -145,7 +136,7 @@ const app = new Vue({
 			document.getElementById("files_checked").style.display = "inline-table"
 		},
 
-         validEmail: function (email) {
+		validEmail: function (email) {
 			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			return re.test(email);
 		},
@@ -160,74 +151,83 @@ const app = new Vue({
 			return re.test(tel);
 
 		},
-		
-	topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-},
-		
-		loadPicker:function(){
-	 gapi.load('auth', {'callback': onAuthApiLoad});
-      gapi.load('picker', {'callback': onPickerApiLoad});
-		
-	},
-		
-	  onAuthApiLoad:function() {
-      window.gapi.auth.authorize(
-          {
-            'client_id': clientId,
-            'scope': scope,
-            'immediate': false
-          },
-          handleAuthResult);
-    },
-		
-	onPickerApiLoad: function() {
-      pickerApiLoaded = true;
-      createPicker();
-    },
-	
-	  handleAuthResult:function(authResult) {
-      if (authResult && !authResult.error) {
-        oauthToken = authResult.access_token;
-        createPicker();
-      }
-    },
-	  createPicker:function() {
-      if (pickerApiLoaded && oauthToken) {
-          var view = new google.picker.DocsView()
-                .setIncludeFolders(false)
-                .setMimeTypes('application/vnd.google-apps.folder,image/png,image/jpeg,image/jpg,text/plain,application/pdf,\n\
+
+		topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		},
+
+		loadPicker: function () {
+			console.log("hi")
+			gapi.load('auth', {
+				'callback': app.onAuthApiLoad
+			});
+			gapi.load('picker', {
+				'callback': app.onPickerApiLoad
+			});
+
+		},
+
+		onAuthApiLoad: function () {
+			console.log("yo")
+			
+				window.gapi.auth.authorize({
+						'client_id': app.clientId,
+						'scope': app.scope,
+						'immediate': false
+					},
+					app.handleAuthResult);
+			
+		},
+		onPickerApiLoad: function () {
+			console.log("hi2")
+			app.pickerApiLoaded = true;
+			app.createPicker();
+		},
+		handleAuthResult: function (authResult) {
+			console.log("hi3")
+			if (authResult && !authResult.error) {
+				oauthToken = authResult.access_token;
+				console.log(oauthToken)
+				app.token = oauthToken;
+				app.createPicker();
+			}
+		},
+		createPicker: function () {
+			if (app.pickerApiLoaded && app.token) {
+				var view = new google.picker.DocsView()
+					.setIncludeFolders(false)
+					.setMimeTypes('application/vnd.google-apps.folder,image/png,image/jpeg,image/jpg,text/plain,application/pdf,\n\
         application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/x-vnd.oasis.opendocument.spreadsheet,\n\
         text/csv,image/svg+xml,application/vnd.openxmlformats-officedocument.presentationml.presentation')
-                .setSelectFolderEnabled(false);
-        var picker = new google.picker.PickerBuilder()
-            .enableFeature(google.picker.Feature.NAV_HIDDEN)
-            .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-            .setAppId(appId)
-            .setOAuthToken(oauthToken)
-            .addView(view)
-            .addView(new google.picker.DocsUploadView())
-            .setDeveloperKey(developerKey)
-            .setCallback(pickerCallback)
-            .build();
-         picker.setVisible(true);
-      }
-    },
-		
-      pickerCallback: function(data) {
-      if (data.action == google.picker.Action.PICKED) {
-        var fileId = data.docs[0].id;
-        alert('The user selected: ' + fileId);
-      }
-    }
+					.setSelectFolderEnabled(false);
+				var picker = new google.picker.PickerBuilder()
+					.enableFeature(google.picker.Feature.NAV_HIDDEN)
+					.enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+					.setAppId(app.appId)
+					.setOAuthToken(app.token)
+					.addView(view)
+					.addView(new google.picker.DocsUploadView())
+					.setDeveloperKey(app.developerKey)
+					.setCallback(app.pickerCallback)
+					.build();
+				picker.setVisible(true);
+			}
+		},
 
-		
-	
-		
-	
-		
-		
+		pickerCallback: function (data) {
+			if (data.action == google.picker.Action.PICKED) {
+				var fileId = data.docs[0].id;
+				alert('The user selected: ' + fileId);
+			}
+		}
+
+
+
+
+
+
+
 
 
 	}
