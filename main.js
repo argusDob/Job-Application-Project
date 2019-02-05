@@ -114,9 +114,8 @@ const app = new Vue({
 				document.getElementById("post").style.border = "solid red";
 				document.getElementById("post-icon").style.display = "none";
 			} else {
-				console.log("dadaasasfdsagafsg131342314213");
 				document.getElementById("post-icon").style.display = "inline-block";
-				document.getElementById("post").style.border = "1px solid #ccc";
+             document.getElementById("post").style.border = "1px solid #ccc";
 
 			}
 			e.preventDefault();
@@ -197,9 +196,7 @@ const app = new Vue({
 			if (app.pickerApiLoaded && app.token) {
 				var view = new google.picker.DocsView()
 					.setIncludeFolders(false)
-					.setMimeTypes('application/vnd.google-apps.folder,image/png,image/jpeg,image/jpg,text/plain,application/pdf,\n\
-        application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/x-vnd.oasis.opendocument.spreadsheet,\n\
-        text/csv,image/svg+xml,application/vnd.openxmlformats-officedocument.presentationml.presentation')
+					.setMimeTypes('image/png,image/jpeg,image/jpg,text/plain,application/pdf,application/docx')
 					.setSelectFolderEnabled(false);
 				var picker = new google.picker.PickerBuilder()
 					.enableFeature(google.picker.Feature.NAV_HIDDEN)

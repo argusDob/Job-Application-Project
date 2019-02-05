@@ -159,7 +159,7 @@
 								<div class="row ">
 									<div class="col-sm-4 col-lg-4">
 										<label>Resume</label>
-										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
+										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
 									</div>
 									<div class="col-sm-8 col-lg-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -169,7 +169,7 @@
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 
-											<button type="button" class="btn btn-default btn-file button"><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
+											<button type="button" class="btn btn-default btn-file button" @click="loadPicker()"><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
 										</div>
 									</div>
 								</div>
@@ -179,7 +179,7 @@
 								<div class="row ">
 									<div class="col-sm-4">
 										<label>Resume</label>
-										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
+										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
 									</div>
 									<div class="col-sm-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -189,7 +189,7 @@
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 
-											<button type="button" class="btn btn-default btn-file button" @click=""><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
+											<button type="button" class="btn btn-default btn-file button" @click="loadPicker()"><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
 										</div>
 									</div>
 								</div>
@@ -199,17 +199,17 @@
 								<div class="row ">
 									<div class="col-sm-4">
 										<label>Resume</label>
-										<span id="files_checked1" class="glyphicon glyphicon-ok"></span>
+										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
 									</div>
 									<div class="col-sm-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png"/>
-										UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+										UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" accesskey="" id="upload-photo" />
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 
-											<button type="button" class="btn btn-default btn-file button" @click="loadPicker()"><img src="Google-Drive-icon.png" width="30" height="30" />GOOG</button>
+											<button type="button" class="btn btn-default btn-file button" @click="loadPicker()"><img src="Google-Drive-icon.png" width="30" height="30" />GOOGLE</button>
 										</div>
 									</div>
 								</div>
@@ -220,15 +220,15 @@
 
 
 						</div>
-						<div class="col-lg-6 col-sm-12 col-xs-4 comments" style="padding-top: 15px;">
+						<div class="col-lg-6 col-sm-4 col-xs-4 comments" style="padding-top: 15px;">
 							<button onclick="goBack()"> &#8592; Back to job description </button>
 						</div>
-						<div class="col-lg-6 col-sm-12 col-xs-8 comments" style="padding-top: 15px;">
+						<div class="col-lg-6 col-sm-8 col-xs-8 comments" style="padding-top: 15px;">
 							<div class="col-sm-6 col-xs-4 col-md-4 comments">
 								<input type="checkbox" name="vehicle1" value="Bike"> I have a bike
 							</div>
 							<div class="col-sm-6 col-xs-8 col-md-8 comments">
-								<button type="button" class="btn btn-default btn-file button" @click="checkForm()"><img src="" width="30" height="30" />Apply for the job</button>
+								<button type="button" class="btn btn-default btn-file button" @click="checkForm()">Apply for the job</button>
 							</div>
 						</div>
 					</div>
