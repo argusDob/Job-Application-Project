@@ -373,12 +373,12 @@ i.fa {
 	}
 	
 	.text{
-	z-index: 1;
+	z-index: 0;
     width: 100%;
     top: 17%;
-    position: fixed;
+    position: absolute;
+    top: 142px;
     background-color: darkgrey;
-    /* font-size: 10px; */
 	}
 	
 	
