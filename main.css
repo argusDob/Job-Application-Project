@@ -1,6 +1,5 @@
-*{
-	font-family: font-family: 'PT Sans', sans-serif;
-}
+
+	
 
 /*nav bar configutration*/
 .links {
@@ -39,8 +38,6 @@ nav .navbar-nav li a {
 }
 
 .navbar {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
 	border-radius: 0;
 }
 
@@ -113,13 +110,23 @@ nav .navbar-nav li a {
 	z-index: 1;
 }
 
+.subtitle {
+	width: 59%;
+	margin: 0 auto;
+	background-color: whitesmoke;
+}
+
+.sub {
+	background-color: whitesmoke;
+}
+
 #form {
-  width: 60%;
-  margin: 0 auto;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .form-control {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 .comments {
@@ -127,36 +134,37 @@ nav .navbar-nav li a {
 }
 
 .btn-file {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
+
 .btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: none;
+	background: white;
+	cursor: inherit;
+	display: block;
 }
 
 .form-butt {
-	padding-top:15px;
+	padding-top: 15px;
 	padding-right: 0;
 }
 
 .extened-container {
-   padding-top:100px;
+	padding-top: 20px;
 	background: whitesmoke;
 }
 
-.labelss{
+.labelss {
 	text-align: center;
 }
 
@@ -164,52 +172,54 @@ nav .navbar-nav li a {
 	padding-top: 15px;
 }
 
-.job-desc {
-
-	
-}
-
-.contact,.procedure{
+.contact,
+.procedure {
 	background: white;
 }
 
-
-  .footer-cont {
-  margin: 0 auto;
-    width: 60%;
-	  padding: 30px;
-    text-align: left;
+.footer-cont {
+	margin: 0 auto;
+	width: 60%;
+	padding: 30px;
+	text-align: left;
 }
 
 i.fa {
-  display: inline-block;
-  border-radius: 60px;
-  box-shadow: 0px 0px 2px #888;
-  padding: 0.5em 0.6em;
+	display: inline-block;
+	border-radius: 60px;
+	-webkit-box-shadow: 0px 0px 2px #888;
+	        box-shadow: 0px 0px 2px #888;
+	padding: 0.5em 0.6em;
 
 }
 
 
 
-.dad{ 
-    display: flex;
-    background: white;
-    width: 60%;
-    margin: 0 auto;
-    padding: 15px;
+.dad {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: white;
+	width: 60%;
+	margin: 0 auto;
+	padding: 15px;
 }
 
 .title {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
-.dad ul{
-	font-size:11px;
+.dad ul {
+	font-size: 11px;
 }
 
 .procedure-title {
-	margin-left:30px;
+	margin-left: 30px;
 }
 
 .app_title {
@@ -217,204 +227,254 @@ i.fa {
 }
 
 .form-icon {
-    color: green;
-    border-radius: 14px;
-    position: absolute;
-    top: 3px;
-    right: 23px;
+	color: green;
+	border-radius: 14px;
+	position: absolute;
+	top: 3px;
+	right: 23px;
 }
 
 #files_checked {
 	display: none;
 }
 
-.back-top{
+.back-top {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	background-color: white;
-	color:black;
+	color: black;
 	border-radius: 0;
 	width: 100px;
 	border: 0;
 }
 
-.dad1{
-	display: none;
+.dad1 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: white;
+	width: 60%;
+	margin: 0 auto;
+	padding: 15px;
 }
 
-   .button {
-    width: 100%;
-  	background-color: #1500ff; /* Green */
-  	border: none;
-  	color: white;
-  	text-align: center;
-  	text-decoration: none;
-  	display: inline-block;
-  	font-size: 10px;
-	 border-radius: 0;
+.button {
+	width: 100%;
+	background-color: #1500ff;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	border-radius: 0;
 }
 
-#files_checked1{
+#files_checked1 {
 	float: right;
 }
 
-.button_gd{
+.button_gd {
 	padding: 10px;
 }
 
-.but{
+.but {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.gdrive{
+.gdrive {
 	padding-right: 1px;
-    padding-left: 1px;
+	padding-left: 1px;
 }
 
-.button_up{
-	height:40px;
+.button_up {
+	height: 40px;
 	text-align: center;
 }
 
 
 @media only screen and (max-width: 769px) {
-		body {
-			background-color: ;
-		}
-
-		#mySidenaadasd {
-			display: block;
-		}
-
-		.navbar-brand {
-			position: absolute;
-			      margin-left: 50px;
-
-			top: 2%;
-
-		}
-
-		.navbar-toggle {
-			position: absolute;
-			margin-left: 15px;
-
-		}
-
-		.form-mobile-search {
-			display: inline-block;
-		}
-
-
-		.navbar-default {
-			height: 100px;
-			z-index: 1;
-		}
-
-		#navBarSearchFormMobile input[type=text] {
-			position: absolute;
-			width: 98% !important;
-			left: 1%;
-			border: 0;
-			border-radius: 0;
-		}
-
-
-		.navbar-toggle {
-			border: none;
-		}
-
-		.navbar-toggle .icon-bar {
-			display: block;
-			width: 24px;
-			height: 4px;
-			/* border-radius: 1px; */
-		}
-
-		.mobile-search-input {
-			position: absolute;
-			bottom: 0%;
-		}
-
-		.button-search-mobile {
-			float: right;
-			right: 2%;
-		}
-
-		.sidenavmono {
-			height: 100%;
-			width: 0;
-			position: fixed;
-			z-index: 0;
-			top: 15%;
-			left: 0;
-			background-color: #111;
-			overflow-x: hidden;
-			transition: 0.5s;
-			padding-top: 60px;
-			top: 12%;
-		}
-
-		.sidenavmono a {
-			padding: 8px 8px 8px 28px;
-			text-decoration: none;
-			font-size: 12px;
-			color: #818181;
-			display: block;
-			transition: 0.3s;
-			color: white;
-		}
-	
-
-	.sidenavmono a:hover {
-		color: #f1f1f1;
+	body {
+		background-color: ;
 	}
 
-	.sidenavmono .closebtn {
+	#mySidenaadasd {
+		display: block;
+	}
+
+	.navbar-brand {
 		position: absolute;
-		top: 0;
-		right: 0px;
-		font-size: 19px;
 		margin-left: 50px;
+		top: 2%;
+
+	}
+
+	.navbar-toggle {
+		position: absolute;
+		margin-left: 15px;
+
+	}
+
+	.form-mobile-search {
+		display: inline-block;
+	}
+
+
+	.navbar-default {
+		height: 100px;
+		z-index: 1;
+	}
+
+	#navBarSearchFormMobile input[type=text] {
+		position: absolute;
+		width: 98% !important;
+		left: 1%;
+		border: 0;
+		border-radius: 0;
+	}
+
+
+	.navbar-toggle {
+		border: none;
+	}
+
+	.navbar-toggle .icon-bar {
+		display: block;
+		width: 24px;
+		height: 4px;
+		/* border-radius: 1px; */
+	}
+
+	.mobile-search-input {
+		position: absolute;
+		bottom: 0%;
+	}
+
+	.button-search-mobile {
+		float: right;
+		right: 2%;
 	}
 	
-	.title{
+	.side-nav-bar-cont {
+	    height: 100%;
+    width: 100%;
+    display: flex;
+	height: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+	.title {
 		display: none;
 	}
-	
-	.text{
-	z-index: 0;
-    width: 100%;
-    top: 17%;
-    position: absolute;
-    top: 142px;
-    background-color: darkgrey;
+
+	.text {
+		z-index: 0;
+		width: 100%;
+		top: 17%;
+		position: absolute;
+		top: 142px;
+		background-color: darkgrey;
 	}
-	
-	
+
+
 	.extened-container {
-        padding-top: 200px;
-    background: whitesmoke;
-}
-	
-	.dad{
-		flex-direction: column;
+		background: whitesmoke;
+	}
+
+	.dad {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		width: 100%;
 		padding: 0;
 	}
-	
+
 	#form {
-    width: 100%;
-   
-}
-	
+		width: 100%;
+
+	}
+
 	.form-up {
-	margin-top: 10px;
-}
+		margin-top: 10px;
+	}
+
+	.sub {
+		margin-top: 180px
+	}
+
+	.subtitle {
+		width: 100%;
+	}
 	
-		
-    }
+	.infos, .jobs{
+		display: none;
+	}
 
 
+}
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  bottom: 570px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 

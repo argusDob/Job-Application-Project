@@ -70,22 +70,38 @@
 					</ul>
 				</div>
 			</nav>
-			<div id="mySidenaadasd" class="sidenavmono">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<a href="#">About</a>
-				<a href="#">Services</a>
-				<a href="#">Clients</a>
-				<a href="#">Contact</a>
-			</div>
-			<div class="text">
+		<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+<div class="side-nav-bar-cont">
+  <!-- Overlay content -->
+  <div class="col-xsm-6 overlay-content">
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">About</a>
+    <a href="#">Department</a>
+  </div>
+    <div class="col-xsm-6 overlay-content">
+    <a href="#">FAQ</a>
+    <a href="#">Application Process</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contat</a>
+  </div>
+
+
+</div>
+			</div>			<div class="text">
 				<h3>PURCHASING ASSISTANT</h3>
 				<h4>AMSTERDAM, THE NETHERLANDS</h4>
 			</div>
 			<div class="title">
 
 			</div>
-
-
+              
+              <div class="container-fluid sub">
+              <div class="subtitle"><h4>APPLY FOR THE POSITION OF PURCHASING ASSISTANT </h4></div>
+              </div>
 			<div class="extened-container">
 				<form id="ref_form" @submit="checkForm" action="https://vuejs.org/" method="post">
 
@@ -249,6 +265,7 @@
 				</div>
 				<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
 			</div>
+<!--
 			<div class="dad1">
 
 				<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
@@ -272,6 +289,7 @@
 				</div>
 
 			</div>
+-->
 			<!-- Footer -->
 			<footer class="page-footer font-small blue pt-4">
 				<!-- Footer Links -->
@@ -279,7 +297,7 @@
 					<!-- Grid row -->
 					<div class="row footer-cont">
 						<!-- Grid column -->
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3 jobs">
 							<!-- Links -->
 							<h5 class="text-uppercase">Jobs At</h5>
 							<ul class="list-unstyled">
@@ -297,7 +315,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3 infos">
 							<!-- Links -->
 							<h5 class="text-uppercase">Information</h5>
 							<ul class="list-unstyled">
@@ -363,19 +381,13 @@
 						<!-- Grid column -->
 						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
 							<!-- Links -->
-							<h5 class="text-uppercase">FOLLOW US</h5>
+							<h5 class="text-uppercase">JOB ALERT</h5>
 							<ul class="list-unstyled">
 								<li>
-									<a href="#!">Link 1</a>
+									<a href="#!"></a>
 								</li>
 								<li>
-									<a href="#!">Link 2</a>
-								</li>
-								<li>
-									<a href="#!">Link 3</a>
-								</li>
-								<li>
-									<a href="#!">Link 4</a>
+									<a href="#!">Subscribe to our job alert!</a>
 								</li>
 							</ul>
 						</div>
@@ -384,12 +396,6 @@
 					<!-- Grid row -->
 				</div>
 				<!-- Footer Links -->
-
-				<!-- Copyright -->
-				<div class="footer-copyright text-center py-3">© 2018 Copyright:
-					<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-				</div>
-				<!-- Copyright -->
 
 			</footer>
 
@@ -408,16 +414,15 @@
 	<script src="main.js"></script>
 
 <script>
-	function openNav() {
-		document.getElementById("mySidenaadasd").style.width = "100%";
-		document.getElementById("main_content").style.marginLeft = "130px";
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
 
-	}
-
-	function closeNav() {
-		document.getElementById("mySidenaadasd").style.width = "0";
-		document.getElementById("main_content").style.marginLeft = "0px";
-	}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 
 </script>
 </body>
