@@ -16,6 +16,9 @@ const app = new Vue({
 		scope: ['https://www.googleapis.com/auth/drive'],
 		pickerApiLoaded: false,
 		token: "",
+		path:0,
+		dataLoad:0,
+		seen:false,
 	},
 	methods: {
 		checkForm: function (e) {
@@ -217,7 +220,20 @@ const app = new Vue({
 				var fileId = data.docs[0].id;
 				alert('The user selected: ' + fileId);
 			}
-		}
+		},
+		
+		page2: function(){
+		app.path=1;
+	},
+		
+		goBack:function(){
+			app.path=0
+		},
+		contRead:function(){
+		app.path=3
+	}
+		
+	
 
 
 

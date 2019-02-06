@@ -11,21 +11,15 @@
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
-
-
-
-
-
-
 </head>
 
 <body>
 	<div id="app">
-		<div>
+		<div v-if="path==1">
 			<nav class="navbar  navbar-default navbar-fixed-top">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button onclick="openNav()" type="button" data-toggle="collapse" class="navbar-toggle">
+					<button @click="" type="button" data-toggle="collapse" class="navbar-toggle">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -44,7 +38,6 @@
 						</div>
 					</form>
 				</div>
-
 				<!-- Collection of nav links, forms, and other content for toggling -->
 				<div id="navbarCollapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav sidenav links">
@@ -64,44 +57,41 @@
 							</div>
 						</div>
 					</form>
-
 					<ul class="nav navbar-nav justify-items-en ">
 						<button class="btn folder-button btn-green" type="button"><i class="glyphicon glyphicon-lock"></i></button>
 					</ul>
 				</div>
 			</nav>
-		<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="" class="closebtn" onclick="closeNav()">&times;</a>
-<div class="side-nav-bar-cont">
-  <!-- Overlay content -->
-  <div class="col-xsm-6 overlay-content">
-    <a href="#">Home</a>
-    <a href="#">Jobs</a>
-    <a href="#">About</a>
-    <a href="#">Department</a>
-  </div>
-    <div class="col-xsm-6 overlay-content">
-    <a href="#">FAQ</a>
-    <a href="#">Application Process</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Contat</a>
-  </div>
-
-
-</div>
-			</div>			<div class="text">
+			<div id="myNav" class="overlay">
+				<!-- Button to close the overlay navigation -->
+				<a href="" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="side-nav-bar-cont">
+					<!-- Overlay content -->
+					<div class="overlay-content side-main-cont">
+						<a href="#">Home</a>
+						<a href="#">Jobs</a>
+						<a href="#">About</a>
+						<a href="#">Department</a>
+					</div>
+					<div class="overlay-content side-sub-content">
+						<a href="#">FAQ</a>
+						<a href="#">Application Process</a>
+						<a href="#">Privacy Policy</a>
+						<a href="#">Contat</a>
+					</div>
+				</div>
+			</div>
+			<div class="text">
 				<h3>PURCHASING ASSISTANT</h3>
 				<h4>AMSTERDAM, THE NETHERLANDS</h4>
 			</div>
 			<div class="title">
-
 			</div>
-              
-              <div class="container-fluid sub">
-              <div class="subtitle"><h4>APPLY FOR THE POSITION OF PURCHASING ASSISTANT </h4></div>
-              </div>
+			<div class="container-fluid sub">
+				<div class="subtitle">
+					<h4>APPLY FOR THE POSITION OF PURCHASING ASSISTANT </h4>
+				</div>
+			</div>
 			<div class="extened-container">
 				<form id="ref_form" @submit="checkForm" action="https://vuejs.org/" method="post">
 
@@ -147,14 +137,11 @@
 								<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
 							</div>
 						</div>
-
-
 						<div class="col-lg-6 comments ">
 							<label for="comment">Comment:</label>
 							<textarea rows="4" cols="50" class="form-control"></textarea>
 						</div>
 						<div class="col-sm-12 col-lg-6 but">
-							<!-- souksou  -->
 							<div class="col-sm-12 col-lg-12 form-butt">
 								<div class="row ">
 									<div class="col-sm-4 col-lg-4">
@@ -163,7 +150,7 @@
 									</div>
 									<div class="col-sm-8 col-lg-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
-											<div class="btn-file button button_up" type=button><img src="icons8-monitor-filled-500.png"/>
+											<div class="btn-file button button_up" type=button><img src="icons8-monitor-filled-500.png" />
 												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
 											</div>
 										</div>
@@ -173,7 +160,6 @@
 										</div>
 									</div>
 								</div>
-
 							</div>
 							<div class="col-sm-12 form-butt">
 								<div class="row ">
@@ -193,7 +179,6 @@
 										</div>
 									</div>
 								</div>
-
 							</div>
 							<div class="col-sm-12 form-butt">
 								<div class="row ">
@@ -203,8 +188,8 @@
 									</div>
 									<div class="col-sm-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
-											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png"/>
-										UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" accesskey="" id="upload-photo" />
+											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png" />
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" accesskey="" id="upload-photo" />
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -217,36 +202,29 @@
 							</div>
 
 							<!-- souksou  -->
-
-
 						</div>
 						<div class="col-lg-6 col-sm-4 col-xs-4 comments" style="padding-top: 15px;">
-							<button onclick="goBack()"> &#8592; Back to job description </button>
+							<button @click="goBack()"> &#8592; Back to job description </button>
 						</div>
 						<div class="col-lg-6 col-sm-8 col-xs-8 comments" style="padding-top: 15px;">
 							<div class="col-sm-6 col-xs-4 col-md-4 comments">
-								<input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+								<input type="checkbox" name="vehicle1" value="Bike"> Send me a copy
 							</div>
-							<div class="col-sm-6 col-xs-8 col-md-8 comments">
-								<button type="button" class="btn btn-default btn-file button" @click="checkForm()">Apply for the job</button>
+							<div class="col-sm-6 col-xs-8 col-md-8 comments ">
+								<button type="button" class="btn btn-default btn-file button apply" @click="checkForm()">Apply for the job</button>
 							</div>
 						</div>
 					</div>
-
 				</form>
 			</div>
-
-
-
-
-			<div class="title container-fluid">
+			<div class="title-sec container-fluid">
 				<div class="dad">
 
 					<div class="procedure col-md-6 col-xsm-12 col-sm-6 ">
 
 						<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
 						<ul>
-							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+							<li>Lorem Ipsum is simply dummy text ofdsvsvddd the printing and typesetting </li>
 							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 							<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
@@ -265,7 +243,7 @@
 				</div>
 				<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
 			</div>
-<!--
+			<!--
 			<div class="dad1">
 
 				<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
@@ -297,7 +275,7 @@
 					<!-- Grid row -->
 					<div class="row footer-cont">
 						<!-- Grid column -->
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3 jobs">
+						<div class="col-md-3 col-sm-3 col-xs-12 jobs">
 							<!-- Links -->
 							<h5 class="text-uppercase">Jobs At</h5>
 							<ul class="list-unstyled">
@@ -315,7 +293,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3 infos">
+						<div class="col-md-3 col-sm-3 col-xs-12 infos">
 							<!-- Links -->
 							<h5 class="text-uppercase">Information</h5>
 							<ul class="list-unstyled">
@@ -333,7 +311,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+						<div class="col-md-3 col-sm-3 col-xs-12">
 							<div class="social">
 								<!-- Links -->
 								<h5 class="text-uppercase">Links</h5>
@@ -379,7 +357,7 @@
 						</div>
 
 						<!-- Grid column -->
-						<div class="col-md-3 col-sm-3 col-xs-12 mb-md-0 mb-3">
+						<div class="col-md-3 col-sm-3 col-xs-12">
 							<!-- Links -->
 							<h5 class="text-uppercase">JOB ALERT</h5>
 							<ul class="list-unstyled">
@@ -402,6 +380,327 @@
 			<!-- Footer -->
 		</div>
 
+		<div v-if="path==0">
+			<nav class="navbar  navbar-default navbar-fixed-top">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button @click="" type="button" data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Brand</a>
+					<form class="form-mobile-search" id="navBarSearchFormMobile">
+						<div class="form-group mobile-search-input">
+							<div class="input-group">
+								<span class="input-group-btn">
+									<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
+
+									<button class="btn button-search-mobile btn-green" type="button"><i class="glyphicon glyphicon-search glyphicon-search-mobile"></i></button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- Collection of nav links, forms, and other content for toggling -->
+				<div id="navbarCollapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav sidenav links">
+						<li class=""><a href="#">Home</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Departments</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search" id="navBarSearchForm">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search Jobs By Keyword">
+								<span class="input-group-btn">
+									<button class="btn button-search btn-green" type="button"><i class="glyphicon glyphicon-desktop glyphicon-search"></i></button>
+								</span>
+							</div>
+						</div>
+					</form>
+					<ul class="nav navbar-nav justify-items-en ">
+						<button class="btn folder-button btn-green" type="button"><i class="glyphicon glyphicon-lock"></i></button>
+					</ul>
+				</div>
+			</nav>
+			<div id="myNav" class="overlay">
+				<!-- Button to close the overlay navigation -->
+				<a href="" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="side-nav-bar-cont">
+					<!-- Overlay content -->
+					<div class="overlay-content side-main-cont">
+						<a href="#">Home</a>
+						<a href="#">Jobs</a>
+						<a href="#">About</a>
+						<a href="#">Department</a>
+					</div>
+					<div class="overlay-content side-sub-content">
+						<a href="#">FAQ</a>
+						<a href="#">Application Process</a>
+						<a href="#">Privacy Policy</a>
+						<a href="#">Contat</a>
+					</div>
+				</div>
+			</div>
+			<div class="text">
+				<h3>THE NEETHERLANDS RETAIL</h3>
+				<h4>NOVEMBER 10 2015</h4>
+			</div>
+			<div class="title">
+			</div>
+			<div class="container-fluid sub">
+				<div class="subtitle">
+					<h2>RETAIL DEVELOPMENT COORDINATOR </h2>
+				</div>
+			</div>
+			<div class="container-fluid job-details">
+				<div class="job-details-content">
+					<h4>Job Descritpion</h4>
+					The Retail Development Project Coordinator will work with our Retail Development Department, with a focus on supporting the Design, Construction, Boutique Care (facilities) and Real Estate Teams. They will support with general tasks associated with new store & remodel construction projects. With 230+ stores in the US and Canadian, this position provides ample opportunity to develop skills related to design, construction, real estate and maintenance.
+					<h4>Tasks and responsibilities</h4>
+					<ul>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+					</ul>
+
+					<ul>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+					</ul>
+					<h4>Proflie</h4>
+
+					<ul>
+						<li>Expertise in MS Office, primarily Word, Excel, Outlook, and PowerPoint. </li>
+						<li>Excellent verbal and written communication skills. </li>
+						<li>Proven ability to multi-task and prioritize.</li>
+						<li>Ability to follow directions, become a team player and be enthusiastic. </li>
+						<li>Familiarity with construction contracts and negotiations.</li>
+						<li>Familiarity with Commercial Leases and construction contracts. </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+					</ul>
+					<div class="col-sm-10 col-xs-10 col-md-6">
+
+						<button type="button" class="btn btn-default btn-file button" @click="page2()">APPLY NOW</button>
+
+					</div>
+
+					<div class="col-sm-2 col-xs-2 col-md-6">
+
+
+						<button type="button" class="btn btn-light"><span class="glyphicon glyphicon-briefcase "></span></button>
+					</div>
+					<div class="col-sm-4 col-xs-12 col-md-2">
+						<h5>Share this job</h5>
+					</div>
+					<div class="col-sm-8 col-xs-12 col-md-10">
+						<i class="fa fa-twitter"></i>
+						<i class="fa fa-facebook"></i>
+						<i class="fa fa-linkedin"></i>
+						<i class="fa fa-google"></i>
+						<i class="fa fa-envelope"></i>
+						<i class="fa fa-print"></i>
+
+					</div>
+				</div>
+				<div class="list-of-jobs">
+					<div class="others-jobs">
+						<h4>OTHER JOBS IN RETAIL</h4>
+					</div>
+					<div class="position">
+						<h3>RETAIL AREA MANAGER</h3>
+						<h6>Amsterdam,Netherlands</h6>
+					</div>
+					<div class="no-list-jobs"></div>
+					<h3>NOTHING FOUND</h3>
+					<h6>Sign Up for a career alert</h6>
+				</div>
+			</div>
+
+			<div class="title-sec container-fluid">
+				<div class="dad">
+
+					<div class="procedure col-md-6 col-xsm-12 col-sm-6 ">
+
+						<h3 class="">ABOUT THE DEPARTMENT</h3>
+
+						The Retail Development Project Coordinator will work with our Retail Development Department, with
+						<button type="button"  v-on:click="seen = !seen">Conitnue Readind</button>
+                        <div v-if="seen">
+						The Retail Development Project Coordinator will work with our Retail DevelosadassaDSAdpment Department, with a focus on supadsadsadporting the Design, Construction, Boutique Care wkdnqkjbndwekbndlwebnfkljweqbflkjqwenf
+						</div>
+
+
+
+
+					</div>
+					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
+						<h2 class="procedure-title">GOT A QUESTION?</h2>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+						<ul>Pleace contact reqruitment</ul>
+
+
+					</div>
+
+				</div>
+				<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
+			</div>
+			<!--
+			<div class="dad1">
+
+				<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
+
+					<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
+					<ul>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
+					</ul>
+				</div>
+				<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
+					<h2 class="procedure-title">GOT A QUESTION?</h2>
+					<ul>Pleace contact reqruitment</ul>
+					<ul>Pleace contact reqruitment</ul>
+					<ul>Pleace contact reqruitment</ul>
+
+
+				</div>
+
+			</div>
+-->
+			<!-- Footer -->
+			<footer class="page-footer font-small blue pt-4">
+				<!-- Footer Links -->
+				<div class="container-fluid text-center text-md-left">
+					<!-- Grid row -->
+					<div class="row footer-cont">
+						<!-- Grid column -->
+						<div class="col-md-3 col-sm-3 col-xs-12 jobs">
+							<!-- Links -->
+							<h5 class="text-uppercase">Jobs At</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!">Home</a>
+								</li>
+								<li>
+									<a href="#!">Jobs</a>
+								</li>
+								<li>
+									<a href="#!">About</a>
+								</li>
+								<li>
+									<a href="#!">Department</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-12 infos">
+							<!-- Links -->
+							<h5 class="text-uppercase">Information</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!">FAQ</a>
+								</li>
+								<li>
+									<a href="#!">Application Process</a>
+								</li>
+								<li>
+									<a href="#!">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#!">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-3 col-xs-12">
+							<div class="social">
+								<!-- Links -->
+								<h5 class="text-uppercase">Links</h5>
+								<ul class="list-unstyled">
+									<li>
+										<i class="fa fa-envelope"></i>
+										<label>Newsletter</label>
+									</li>
+									<li>
+										<i class="fa fa-instagram"></i>
+										<label>Instagram</label>
+									</li>
+									<li>
+										<i class="fa fa-twitter"></i>
+										<label>Twitter</label>
+									</li>
+									<li>
+										<i class="fa fa-tumblr"></i>
+										<label>Tumblr</label>
+									</li>
+									<li>
+										<i class="fa fa-linkedin"></i>
+										<label>Linkedin</label>
+									</li>
+									<li>
+										<i class="fa fa-facebook"></i>
+										<label>facebook</label>
+									</li>
+									<li>
+										<i class="fa fa-pinterest"></i>
+										<label>Printerest</label>
+									</li>
+									<li>
+										<i class="fa fa-youtube"></i>
+										<label>Youtube</label>
+									</li>
+									<li>
+										<i class="fa fa-google"></i>
+										<label>Google +</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Grid column -->
+						<div class="col-md-3 col-sm-3 col-xs-12">
+							<!-- Links -->
+							<h5 class="text-uppercase">JOB ALERT</h5>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#!"></a>
+								</li>
+								<li>
+									<a href="#!">Subscribe to our job alert!</a>
+								</li>
+							</ul>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+				<!-- Footer Links -->
+
+			</footer>
+
+			<!-- Footer -->
+		</div>
+
+
+
 	</div>
 	<script>
 	</script>
@@ -413,18 +712,18 @@
 
 	<script src="main.js"></script>
 
-<script>
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
+	<script>
+		/* Open when someone clicks on the span element */
+		function openNav() {
+			document.getElementById("myNav").style.width = "100%";
+		}
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
 
-</script>
+	</script>
 </body>
 
 
