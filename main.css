@@ -450,7 +450,7 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
  { .overlay .closebtn {
 
-  bottom: 600px;
+  bottom: 560px;
 
 }}
 
