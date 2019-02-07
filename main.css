@@ -1,7 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+ * {
+            font-family: 'Open Sans';
+  
+        }
 
 
-	
+
+h3{
+	font-weight: 1000;
+}
+
+h4{
+	font-weight:700;
+}
 
 /*nav bar configutration*/
 .links {
@@ -93,6 +106,8 @@ nav .navbar-nav li a {
   background-color: rgb(0,0,0); /* Black fallback color */
   background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
@@ -112,6 +127,8 @@ nav .navbar-nav li a {
   font-size:;
   color: #818181;
   display: block; /* Display block instead of inline */
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -123,7 +140,7 @@ nav .navbar-nav li a {
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  bottom: 570px;
+  bottom: 500px;
   right: 45px;
   font-size: 60px;
 }
@@ -221,8 +238,9 @@ nav .navbar-nav li a {
 }
 
 .extened-container {
-	padding-top: 20px;
+	padding-top: 50px;
 	background: whitesmoke;
+	padding-bottom: 50px
 }
 
 .labelss {
@@ -263,7 +281,6 @@ i.fa {
 	background: white;
 	width: 60%;
 	margin: 0 auto;
-	padding: 15px;
 }
 
 /*
@@ -289,6 +306,8 @@ i.fa {
 .app_title {
 	font-size: 20px;
 }
+
+
 
 .form-icon {
 	color: green;
@@ -318,15 +337,6 @@ i.fa {
 	border: 0;
 }
 
-.dad1 {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	background: white;
-	width: 60%;
-	margin: 0 auto;
-	padding: 15px;
-}
 
 .button {
 	width: 100%;
@@ -361,6 +371,10 @@ i.fa {
 .button_up {
 	height: 40px;
 	text-align: center;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
 }
 
 .social li{
@@ -370,7 +384,7 @@ i.fa {
 
 .social{
 	font-size:10px;
-	columns:2
+
 }
 
 .job-details-content {
@@ -385,7 +399,7 @@ i.fa {
 
 .apply {
 	height: 40px;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 .side-sub-content a{
@@ -403,11 +417,71 @@ i.fa {
 
 
 .list-of-jobs {
-	
-			width: 60%;
-	margin: 0 auto;
-	margin-top: 110px;
+margin: 0 auto;
+    margin-top: 104px;
+    text-align: center;
 }
+
+}
+
+	.social li{
+		margin-top:10px;
+	}
+
+.dad1{
+width: 60%;
+    margin: 0 auto;
+}
+
+.comment {
+		padding-left: 0;
+}
+
+.myvideo {
+	
+	    height: 287px;
+    width: 100%;
+	
+}
+
+.about {
+	width:60%;
+	margin:0 auto;
+	margin-bottom:20px;
+	text-align: justify;
+}
+
+.reading-btn {
+	    border: none;
+    background: whitesmoke;
+	margin-top: 5px;
+	font-weight: 600;
+}
+
+.about-title{
+		text-align: center;
+	}
+
+
+
+#motivation-icon {
+	margin-top: 50px
+}
+
+
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+ { .overlay .closebtn {
+
+  bottom: 700px;
+
+}}
+
+
 
 @media only screen and (max-width: 769px) {
 	body {
@@ -427,7 +501,7 @@ i.fa {
 
 	.navbar-toggle {
 		position: absolute;
-		margin-left: 15px;
+		margin-left: 5px;
 
 	}
 
@@ -474,13 +548,22 @@ i.fa {
 	.side-nav-bar-cont {
 	    height: 100%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 	height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
+	
+
 
 
 	.title {
@@ -493,7 +576,8 @@ i.fa {
 		top: 17%;
 		position: absolute;
 		top: 142px;
-		background-color: darkgrey;
+		background-color: white;
+    color: black !important;
 	}
 
 
@@ -509,6 +593,13 @@ i.fa {
 		width: 100%;
 		padding: 0;
 	}
+	
+	
+	.dad1 {
+
+	width: 100%;
+
+}
 
 	#form {
 		width: 100%;
@@ -520,7 +611,7 @@ i.fa {
 	}
 
 	.sub {
-		margin-top: 200px;
+		margin-top: 185px;
 	}
 
 	.subtitle {
@@ -533,7 +624,8 @@ i.fa {
 	
 	.social{
 	font-size:10px;
-	columns:1
+	-webkit-columns:1;
+	        columns:1
 }
 	
 	.title-sec{
@@ -548,6 +640,7 @@ i.fa {
 	.job-details-content {
 			width: 100%;
 	margin: 0 auto;
+		text-align: justify;
 }
 	
 	.list-of-jobs {
@@ -562,7 +655,18 @@ i.fa {
 line-height: 1px;
 	
 }
+	
+/*
+.footer-cont {
+width: 100%;
+    padding: 30px;
+	text-align: center;
+}
+*/
 
+	.social li{
+		margin-top:10px;
+	}
 
 
 .others-jobs {
@@ -579,13 +683,32 @@ line-height: 1px;
 }
 * {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+	.about{
+	
+		    width: 100%;
+    text-align: justify;
+    border-top: solid 1px black;
+			
+		}
 
-
+	
 }
 
 
 
+
+
+
+
+.back-button {
+	border: none;
+	font-size:10px;
+	background-color: whitesmoke;
+}
+
+#motivation {
+	padding-top: 10px;
+}

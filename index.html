@@ -8,8 +8,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="main.css">
+
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
 </head>
 
@@ -19,7 +22,7 @@
 			<nav class="navbar  navbar-default navbar-fixed-top">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button @click="" type="button" data-toggle="collapse" class="navbar-toggle">
+					<button type="button" @click="openNav()" data-toggle="collapse" class="navbar-toggle">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -61,10 +64,10 @@
 						<button class="btn folder-button btn-green" type="button"><i class="glyphicon glyphicon-lock"></i></button>
 					</ul>
 				</div>
-			</nav>
+			</nav>z
 			<div id="myNav" class="overlay">
 				<!-- Button to close the overlay navigation -->
-				<a href="" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="" class="closebtn" @click="closeNav()">&times;</a>
 				<div class="side-nav-bar-cont">
 					<!-- Overlay content -->
 					<div class="overlay-content side-main-cont">
@@ -90,10 +93,20 @@
 			<div class="container-fluid sub">
 				<div class="subtitle">
 					<h4>APPLY FOR THE POSITION OF PURCHASING ASSISTANT </h4>
+
+					<div v-if="errors.length">
+						<b>Please correct the following error(s):</b>
+						<ul>
+							<li v-for="error in errors">{{ error }}</li>
+						</ul>
+					</div>
+
+
 				</div>
 			</div>
 			<div class="extened-container">
-				<form id="ref_form" @submit="checkForm" action="https://vuejs.org/" method="post">
+				<form id="ref_form" @submit="checkForm" action="https://vuejs.org/" method="post"
+				novalidate="true">
 
 					<div class="container" id="form">
 
@@ -133,25 +146,27 @@
 								<i class="fa fa-check form-icon" style="display:none;" id="city-icon"></i>
 							</div>
 							<div class="col-lg-6 col-sm-6 col-xsm-6">
-								<input class="form-control" id="date" v-model="date" name="date" placeholder="date" type="date">
+								<input class="form-control form-up" id="date" v-model="date" name="date" placeholder="date" type="date">
 								<i class="fa fa-check form-icon" style="display:none;" id="date-icon"></i>
 							</div>
 						</div>
 						<div class="col-lg-6 comments ">
-							<label for="comment">Comment:</label>
-							<textarea rows="4" cols="50" class="form-control"></textarea>
+							<label for="comment">Your Motivation *</label>
+							<textarea v-model="motivation" rows="4" cols="50" class="form-control" id="motivation"
+							 ></textarea>
+							<i class="fa fa-check form-icon" style="display:none;" id="motivation-icon"></i>
 						</div>
 						<div class="col-sm-12 col-lg-6 but">
 							<div class="col-sm-12 col-lg-12 form-butt">
 								<div class="row ">
 									<div class="col-sm-4 col-lg-4">
 										<label>Resume</label>
-										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
+										<span id="files_checked-resume" style="display:none" class="glyphicon glyphicon-ok" ></span>
 									</div>
 									<div class="col-sm-8 col-lg-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 											<div class="btn-file button button_up" type=button><img src="icons8-monitor-filled-500.png" />
-												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file1"  id="upload-photo" />
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -164,13 +179,13 @@
 							<div class="col-sm-12 form-butt">
 								<div class="row ">
 									<div class="col-sm-4">
-										<label>Resume</label>
-										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
+										<label>Portfolio</label>
+										<span id="files_checked-port" style="display: none;" class="glyphicon glyphicon-ok"></span>
 									</div>
 									<div class="col-sm-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png" />
-												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" id="upload-photo" />
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file2"  id="upload-photo" />
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -183,13 +198,13 @@
 							<div class="col-sm-12 form-butt">
 								<div class="row ">
 									<div class="col-sm-4">
-										<label>Resume</label>
-										<span id="files_checked" class="glyphicon glyphicon-ok"></span>
+										<label>Photo</label>
+										<span id="files_checked_photo" class="glyphicon glyphicon-ok" style="display:none"></span>
 									</div>
 									<div class="col-sm-8 gdrive">
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
 											<div class="btn-file button button_up"><img src="icons8-monitor-filled-500.png" />
-												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" @change="checkUpload" accesskey="" id="upload-photo" />
+												UPLOAD <input type="file" accept=".txt, .pdf, .rtf, .docx" ref="file" accesskey="" id="upload-photo" />
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-6 col-md-6 comments">
@@ -204,14 +219,14 @@
 							<!-- souksou  -->
 						</div>
 						<div class="col-lg-6 col-sm-4 col-xs-4 comments" style="padding-top: 15px;">
-							<button @click="goBack()"> &#8592; Back to job description </button>
+							<button class="back-button" @click="goBack()"> &#8592; Back to job description </button>
 						</div>
 						<div class="col-lg-6 col-sm-8 col-xs-8 comments" style="padding-top: 15px;">
-							<div class="col-sm-6 col-xs-4 col-md-4 comments">
+							<div class="col-sm-6 col-xs-4 col-md-4 comment">
 								<input type="checkbox" name="vehicle1" value="Bike"> Send me a copy
 							</div>
 							<div class="col-sm-6 col-xs-8 col-md-8 comments ">
-								<button type="button" class="btn btn-default btn-file button apply" @click="checkForm()">Apply for the job</button>
+								<button type="Submit" @click="checkForm()" value="submit" class="btn btn-default btn-file button apply">Apply for the job</button>
 							</div>
 						</div>
 					</div>
@@ -232,7 +247,7 @@
 						</ul>
 					</div>
 					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
-						<h2 class="procedure-title">GOT A QUESTION?</h2>
+						<h3 class="procedure-title">GOT A QUESTION?</h3>
 						<ul>Pleace contact reqruitment</ul>
 						<ul>Pleace contact reqruitment</ul>
 						<ul>Pleace contact reqruitment</ul>
@@ -384,7 +399,7 @@
 			<nav class="navbar  navbar-default navbar-fixed-top">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button @click="" type="button" data-toggle="collapse" class="navbar-toggle">
+					<button @click="openNav()" type="button" data-toggle="collapse" class="navbar-toggle">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -429,7 +444,7 @@
 			</nav>
 			<div id="myNav" class="overlay">
 				<!-- Button to close the overlay navigation -->
-				<a href="" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="" class="closebtn" @click="closeNav()">&times;</a>
 				<div class="side-nav-bar-cont">
 					<!-- Overlay content -->
 					<div class="overlay-content side-main-cont">
@@ -446,6 +461,8 @@
 					</div>
 				</div>
 			</div>
+
+
 			<div class="text">
 				<h3>THE NEETHERLANDS RETAIL</h3>
 				<h4>NOVEMBER 10 2015</h4>
@@ -483,7 +500,7 @@
 						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 					</ul>
-					<h4>Proflie</h4>
+					<h4>Profile</h4>
 
 					<ul>
 						<li>Expertise in MS Office, primarily Word, Excel, Outlook, and PowerPoint. </li>
@@ -495,13 +512,13 @@
 						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
 					</ul>
-					<div class="col-sm-10 col-xs-10 col-md-6">
+					<div class="col-sm-10 col-xs-10 col-md-8 col-lg-8">
 
 						<button type="button" class="btn btn-default btn-file button" @click="page2()">APPLY NOW</button>
 
 					</div>
 
-					<div class="col-sm-2 col-xs-2 col-md-6">
+					<div class="col-sm-2 col-xs-2 col-md-4 col-lg-4">
 
 
 						<button type="button" class="btn btn-light"><span class="glyphicon glyphicon-briefcase "></span></button>
@@ -531,199 +548,157 @@
 					<h3>NOTHING FOUND</h3>
 					<h6>Sign Up for a career alert</h6>
 				</div>
-			</div>
 
-			<div class="title-sec container-fluid">
-				<div class="dad">
+				<div class="about ">
 
-					<div class="procedure col-md-6 col-xsm-12 col-sm-6 ">
+					<h3 class="about-title">ABOUT THE DEPARTMENT</h3>
 
-						<h3 class="">ABOUT THE DEPARTMENT</h3>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					<div v-if="seen">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</div>
+					<button type="button" class="reading-btn" v-on:click="seen = !seen">Continue Reading</button>
 
-						The Retail Development Project Coordinator will work with our Retail Development Department, with
-						<button type="button"  v-on:click="seen = !seen">Conitnue Readind</button>
-                        <div v-if="seen">
-						The Retail Development Project Coordinator will work with our Retail DevelosadassaDSAdpment Department, with a focus on supadsadsadporting the Design, Construction, Boutique Care wkdnqkjbndwekbndlwebnfkljweqbflkjqwenf
+
+
+				</div>
+
+				<div class="title-sec container-fluid">
+					<div class="dad1">
+
+
+						<div class="">
+							<iframe class="myvideo" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" cl>
+							</iframe>
+
+
 						</div>
-
-
-
 
 					</div>
-					<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
-						<h2 class="procedure-title">GOT A QUESTION?</h2>
-						<ul>Pleace contact reqruitment</ul>
-						<ul>Pleace contact reqruitment</ul>
-						<ul>Pleace contact reqruitment</ul>
-
-
-					</div>
-
-				</div>
-				<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
-			</div>
-			<!--
-			<div class="dad1">
-
-				<div class="procedure col-md-6 col-xsm-12 col-sm-12 ">
-
-					<h3 class="procedure-title">APPLICATION PROCEDURE</h3>
-					<ul>
-						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-						<li>Lorem Ipsum is simply dummy text of the printing and typesetting </li>
-					</ul>
-				</div>
-				<div class="contact col-md-6 col-sm-4 col-xsm-12  col-sm-12">
-					<h2 class="procedure-title">GOT A QUESTION?</h2>
-					<ul>Pleace contact reqruitment</ul>
-					<ul>Pleace contact reqruitment</ul>
-					<ul>Pleace contact reqruitment</ul>
-
-
+					<button type="button" class="btn btn-primary  back-top" @click="topFunction"><span class="glyphicon glyphicon-arrow-up "></span></button>
 				</div>
 
-			</div>
--->
-			<!-- Footer -->
-			<footer class="page-footer font-small blue pt-4">
-				<!-- Footer Links -->
-				<div class="container-fluid text-center text-md-left">
-					<!-- Grid row -->
-					<div class="row footer-cont">
-						<!-- Grid column -->
-						<div class="col-md-3 col-sm-3 col-xs-12 jobs">
-							<!-- Links -->
-							<h5 class="text-uppercase">Jobs At</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a href="#!">Home</a>
-								</li>
-								<li>
-									<a href="#!">Jobs</a>
-								</li>
-								<li>
-									<a href="#!">About</a>
-								</li>
-								<li>
-									<a href="#!">Department</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12 infos">
-							<!-- Links -->
-							<h5 class="text-uppercase">Information</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a href="#!">FAQ</a>
-								</li>
-								<li>
-									<a href="#!">Application Process</a>
-								</li>
-								<li>
-									<a href="#!">Privacy Policy</a>
-								</li>
-								<li>
-									<a href="#!">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-3 col-sm-3 col-xs-12">
-							<div class="social">
+				<!-- Footer -->
+				<footer class="page-footer font-small blue pt-4">
+					<!-- Footer Links -->
+					<div class="container-fluid text-center text-md-left">
+						<!-- Grid row -->
+						<div class="row footer-cont">
+							<!-- Grid column -->
+							<div class="col-md-3 col-sm-3 col-xs-12 jobs">
 								<!-- Links -->
-								<h5 class="text-uppercase">Links</h5>
+								<h5 class="text-uppercase">Jobs At</h5>
 								<ul class="list-unstyled">
 									<li>
-										<i class="fa fa-envelope"></i>
-										<label>Newsletter</label>
+										<a href="#!">Home</a>
 									</li>
 									<li>
-										<i class="fa fa-instagram"></i>
-										<label>Instagram</label>
+										<a href="#!">Jobs</a>
 									</li>
 									<li>
-										<i class="fa fa-twitter"></i>
-										<label>Twitter</label>
+										<a href="#!">About</a>
 									</li>
 									<li>
-										<i class="fa fa-tumblr"></i>
-										<label>Tumblr</label>
-									</li>
-									<li>
-										<i class="fa fa-linkedin"></i>
-										<label>Linkedin</label>
-									</li>
-									<li>
-										<i class="fa fa-facebook"></i>
-										<label>facebook</label>
-									</li>
-									<li>
-										<i class="fa fa-pinterest"></i>
-										<label>Printerest</label>
-									</li>
-									<li>
-										<i class="fa fa-youtube"></i>
-										<label>Youtube</label>
-									</li>
-									<li>
-										<i class="fa fa-google"></i>
-										<label>Google +</label>
+										<a href="#!">Department</a>
 									</li>
 								</ul>
 							</div>
-						</div>
+							<div class="col-md-3 col-sm-3 col-xs-12 infos">
+								<!-- Links -->
+								<h5 class="text-uppercase">Information</h5>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#!">FAQ</a>
+									</li>
+									<li>
+										<a href="#!">Application Process</a>
+									</li>
+									<li>
+										<a href="#!">Privacy Policy</a>
+									</li>
+									<li>
+										<a href="#!">Contact</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-12">
+								<div class="social">
+									<!-- Links -->
+									<h5 class="text-uppercase">Links</h5>
+									<ul class="list-unstyled">
+										<li>
+											<i class="fa fa-envelope"></i>
+											<label>Newsletter</label>
+										</li>
+										<li>
+											<i class="fa fa-instagram"></i>
+											<label>Instagram</label>
+										</li>
+										<li>
+											<i class="fa fa-twitter"></i>
+											<label>Twitter</label>
+										</li>
+										<li>
+											<i class="fa fa-tumblr"></i>
+											<label>Tumblr</label>
+										</li>
+										<li>
+											<i class="fa fa-linkedin"></i>
+											<label>Linkedin</label>
+										</li>
+										<li>
+											<i class="fa fa-facebook"></i>
+											<label>facebook</label>
+										</li>
+										<li>
+											<i class="fa fa-pinterest"></i>
+											<label>Printerest</label>
+										</li>
+										<li>
+											<i class="fa fa-youtube"></i>
+											<label>Youtube</label>
+										</li>
+										<li>
+											<i class="fa fa-google"></i>
+											<label>Google +</label>
+										</li>
+									</ul>
+								</div>
+							</div>
 
-						<!-- Grid column -->
-						<div class="col-md-3 col-sm-3 col-xs-12">
-							<!-- Links -->
-							<h5 class="text-uppercase">JOB ALERT</h5>
-							<ul class="list-unstyled">
-								<li>
-									<a href="#!"></a>
-								</li>
-								<li>
-									<a href="#!">Subscribe to our job alert!</a>
-								</li>
-							</ul>
+							<!-- Grid column -->
+							<div class="col-md-3 col-sm-3 col-xs-12">
+								<!-- Links -->
+								<h5 class="text-uppercase">JOB ALERT</h5>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#!"></a>
+									</li>
+									<li>
+										<a href="#!">Subscribe to our job alert!</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Grid column -->
 						</div>
-						<!-- Grid column -->
+						<!-- Grid row -->
 					</div>
-					<!-- Grid row -->
-				</div>
-				<!-- Footer Links -->
+					<!-- Footer Links -->
 
-			</footer>
+				</footer>
 
-			<!-- Footer -->
+				<!-- Footer -->
+			</div>
+
+
+
 		</div>
-
-
-
 	</div>
-	<script>
-	</script>
 
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
-
 	<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=loadPicker"></script>
-
-
 	<script src="main.js"></script>
 
-	<script>
-		/* Open when someone clicks on the span element */
-		function openNav() {
-			document.getElementById("myNav").style.width = "100%";
-		}
-
-		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeNav() {
-			document.getElementById("myNav").style.width = "0%";
-		}
-
-	</script>
 </body>
 
 
