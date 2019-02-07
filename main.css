@@ -6,8 +6,6 @@
   
         }
 
-
-
 h3{
 	font-weight: 1000;
 }
@@ -144,10 +142,6 @@ nav .navbar-nav li a {
   right: 45px;
   font-size: 60px;
 }
-
-
-
-
 /*   end nav bar configuration*/
 .title, .title-sec {
 	background-image: url(rawpixel-250087-unsplash.jpg);
@@ -164,10 +158,7 @@ nav .navbar-nav li a {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	
-
-}
-
+	}
 .text {
 	color: white !important;
 	font-size: 20px;
@@ -269,10 +260,7 @@ i.fa {
 	-webkit-box-shadow: 0px 0px 2px #888;
 	        box-shadow: 0px 0px 2px #888;
 	padding: 0.5em 0.6em;
-
 }
-
-
 
 .dad {
 	display: -webkit-box;
@@ -283,21 +271,17 @@ i.fa {
 	margin: 0 auto;
 }
 
-/*
-.title {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	margin-top:1px;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-}
-*/
-
 .dad ul {
 	font-size: 11px;
 }
+
+.back-button {
+	border: none;
+	font-size:10px;
+	background-color: whitesmoke;
+}
+
+
 
 .procedure-title {
 	margin-left: 30px;
@@ -306,8 +290,6 @@ i.fa {
 .app_title {
 	font-size: 20px;
 }
-
-
 
 .form-icon {
 	color: green;
@@ -375,7 +357,6 @@ i.fa {
     align-items: center;
     justify-content: center;
 }
-}
 
 .social li{
 	
@@ -422,9 +403,7 @@ margin: 0 auto;
     text-align: center;
 }
 
-}
-
-	.social li{
+.social li{
 		margin-top:10px;
 	}
 
@@ -461,15 +440,9 @@ width: 60%;
 .about-title{
 		text-align: center;
 	}
-
-
-
 #motivation-icon {
 	margin-top: 50px
 }
-
-
-
 
 @media only screen 
 and (min-device-width : 375px) 
@@ -477,11 +450,9 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
  { .overlay .closebtn {
 
-  bottom: 700px;
+  bottom: 600px;
 
 }}
-
-
 
 @media only screen and (max-width: 769px) {
 	body {
@@ -496,8 +467,7 @@ and (-webkit-device-pixel-ratio : 3)
 		position: absolute;
 		margin-left: 50px;
 		top: 2%;
-
-	}
+}
 
 	.navbar-toggle {
 		position: absolute;
@@ -563,9 +533,6 @@ and (-webkit-device-pixel-ratio : 3)
             justify-content: center;
 }
 	
-
-
-
 	.title {
 		display: none;
 	}
@@ -594,17 +561,14 @@ and (-webkit-device-pixel-ratio : 3)
 		padding: 0;
 	}
 	
-	
 	.dad1 {
 
 	width: 100%;
-
-}
+	}
 
 	#form {
 		width: 100%;
-
-	}
+}
 
 	.form-up {
 		margin-top: 10px;
@@ -656,14 +620,6 @@ line-height: 1px;
 	
 }
 	
-/*
-.footer-cont {
-width: 100%;
-    padding: 30px;
-	text-align: center;
-}
-*/
-
 	.social li{
 		margin-top:10px;
 	}
@@ -703,12 +659,8 @@ width: 100%;
 
 
 
-.back-button {
-	border: none;
-	font-size:10px;
-	background-color: whitesmoke;
-}
 
-#motivation {
-	padding-top: 10px;
+#motivation-block {
+		padding-top: 10px;
+
 }
