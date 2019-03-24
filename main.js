@@ -28,6 +28,7 @@ const app = new Vue({
 
 	},
 	methods: {
+		//validate form
 		checkForm: function (e) {
 
 			this.errors = [];
