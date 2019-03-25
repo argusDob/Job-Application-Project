@@ -33,7 +33,7 @@ the applicant to enter his or her personal details, provide a motivational lette
 ![home](https://i.imgur.com/xYFSorP.jpg)
 
 ###### Screenshots
-![home](https://i.imgur.com/ILWzGQB.png)
+![about](https://i.imgur.com/ILWzGQB.png)
 ![home](https://i.imgur.com/CmvhbyL.png)
 ![home](https://i.imgur.com/iOzWjfW.png)
 
