@@ -1,4 +1,4 @@
-# Job-Application-Project
+# Job Application Project
 
 ## The vacancy apply page 
 
