@@ -23,10 +23,12 @@ the applicant to enter his or her personal details, provide a motivational lette
 * OAuth 2.0 protocoll
 
 ###### Tasks
-* Upload Files from Google Drive
+* Full- Responsive design
+Upload Files from Google Drive
 * Feedback to the user about the missing data
 * The form accept only Dutch phone numbers and zip codes
-* Full- Responsive design
+* Upload Files from Google Drive
+
 
 ###### PSD images
 ![home](https://i.imgur.com/ccOPxec.png)
