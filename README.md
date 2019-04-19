@@ -5,7 +5,7 @@
 ###### Description
 
 
-An applicant, visiting the website, is able to apply in a plethora of situations. 
+An applicant, visiting, the website, is able to apply in a plethora of situations. 
 It is not matter what kind of computer or device the applicant is using, with which browser he or she visits the website 
 and with what kind of external limitations, be it physical or technical,the applicant has to deal with. 
 The application process on the website is unambiguous, accessible, easy to use as well as attractive. 
